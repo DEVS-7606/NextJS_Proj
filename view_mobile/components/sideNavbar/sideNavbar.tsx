@@ -1,185 +1,82 @@
+import { otherServices, services } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
-const SideNavbar: () => JSX.Element = () => {
+const SideNavbar = (props: { showSideNavbar: boolean }): JSX.Element => {
   return (
-    <section className="w-full">
+    <section
+      className={
+        props.showSideNavbar
+          ? "max-w-7xl mx-auto fixed left-0 top-4 w-[100%] h-screen bg-white py-10 transform overflow-y-auto translate-x-0 duration-200 no-scrollbar xl:left-[-100%]"
+          : "max-w-7xl mx-auto fixed left-[-100%] top-0 p-10 transform overflow-y-auto translate-x-0 duration-200"
+      }
+    >
       <ul className="flex flex-col px-4 gap-6 pb-6 pt-2">
-        <li className="text-2xl">
-          <Link href="#">Buy</Link>
-        </li>
-        <li className="text-2xl">
-          <Link href="#">Rent</Link>
-        </li>
-        <li className="text-2xl">
-          <Link href="#">Sold</Link>
-        </li>
-        <li className="text-[#444343]">
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-rocket.svg"
-                alt="rocket"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>New Developments</span>
-          </Link>
-        </li>
-        <li className="text-[#444343]">
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-scales.svg"
-                alt="rocket"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Price Estimate</span>
-          </Link>
-        </li>
+        {viewMainServices()}
+        {viewOtherImpServices()}
       </ul>
       <hr className=" w-full " />
-      <ul className="text-[#444343] px-4 flex flex-col gap-6 pb-6 pt-8">
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-users.svg"
-                alt="users"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Find Agents</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-auction.svg"
-                alt="auction"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Auction Results</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-marker-pin.svg"
-                alt="pin"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Location Profiles</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-lightbulb.svg"
-                alt="bulb"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Advice</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-file.svg"
-                alt="file"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>News</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-coins-hand.svg"
-                alt="coins"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Home Loans</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-switch-horizontal-02.svg"
-                alt="exchange"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>Conveyancing</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="#"
-            className="flex font-extralight gap-4 text-base place-items-center"
-          >
-            <span>
-              <Image
-                src="images/nav-info-circle.svg"
-                alt="about"
-                width="20"
-                height="20"
-              />
-            </span>
-            <span>About</span>
-          </Link>
-        </li>
+      <ul className="text-grayType px-4 flex flex-col gap-6 pb-6 pt-8">
+        {viewOtherServices()}
       </ul>
     </section>
   );
 };
 
 export default SideNavbar;
+
+const viewMainServices = (): JSX.Element[] => {
+  return services.slice(0, 3).map((service) => {
+    return (
+      <li className="text-2xl">
+        <Link href="#">{service.name}</Link>
+      </li>
+    );
+  });
+};
+
+const viewOtherImpServices = (): JSX.Element[] => {
+  return otherServices.slice(0, 2).map((service) => {
+    return (
+      <li className="text-grayType">
+        <Link
+          href="#"
+          className="flex font-extralight gap-4 text-base place-items-center"
+        >
+          {service.image && (
+            <Image
+              src={service.image.src}
+              alt={service.image.alt}
+              width="20"
+              height="20"
+            />
+          )}
+          {service.name}
+        </Link>
+      </li>
+    );
+  });
+};
+
+const viewOtherServices = (): JSX.Element[] => {
+  return otherServices.slice(2, 11).map((service) => {
+    return (
+      <li>
+        <Link
+          href="#"
+          className="flex font-extralight gap-4 text-base place-items-center"
+        >
+          {service.image && (
+            <Image
+              src={service.image.src}
+              alt={service.image.alt}
+              width="20"
+              height="20"
+            />
+          )}
+          {service.name}
+        </Link>
+      </li>
+    );
+  });
+};

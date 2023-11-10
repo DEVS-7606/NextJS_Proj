@@ -1,11 +1,10 @@
-import Image from "next/image";
 import HeroSection from "./hero";
 import DesktopPageView from "./desktopView";
 import MobilePageView from "./mobileView";
 
 const Main: () => JSX.Element = () => {
   return (
-    <div className="flex flex-col py-8 mt-20 max-xl:px-4 max-xl:mt-9">
+    <div className="flex max-w-7xl mx-auto flex-col py-8 max-xl:py-4 max-xl:px-4 ">
       <HeroSection />
       <MobilePageView />
       <DesktopPageView />

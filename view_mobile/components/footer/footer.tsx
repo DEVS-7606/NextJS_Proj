@@ -1,193 +1,34 @@
+import { Images, otherServices, servicesInFooter } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer: () => JSX.Element = () => {
   return (
-    <footer className="text-[#666666] flex flex-col gap-8 text-base py-0 max-lg:text-center max-lg:px-4">
+    <footer className="max-w-7xl mx-auto text-lightGray flex flex-col gap-8 text-base py-0 max-lg:text-center max-lg:px-4">
       <section className="flex flex-row justify-between max-lg:justify-center">
         <div className="flex flex-row justify-evenly gap-8">
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            <Image src="/images/facebook.svg" alt="FB" width={25} height={25} />
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            <Image
-              src="/images/twitter.svg"
-              alt="tweet"
-              width={25}
-              height={25}
-            />
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            <Image
-              src="/images/instagram.svg"
-              alt="Insta"
-              width={25}
-              height={25}
-            />
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            <Image src="/images/linkedIn.svg" alt="Li" width={25} height={25} />
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            <Image
-              src="/images/pinterest.svg"
-              alt="pin"
-              width={25}
-              height={25}
-            />
-          </Link>
+          {socialMediaIcons()}
         </div>
         <div className="flex flex-row justify-evenly gap-8 max-lg:hidden">
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            Agent Login
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            About us
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            Contact
-          </Link>
-          <Link href="#" className="hover:text-blue-600 hover:underline">
-            FAQs
-          </Link>
+          {OtherServices()}
         </div>
       </section>
       <hr className="w-full" />
-      <section className="flex text-left w-full max-lg:justify-center max-lg:text-center">
+      <section className="flex text-left w-full max-lg:justify-center max-lg:text-center max-lg:flex-row-reverse">
         <div className="w-1/4 max-lg:hidden">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Real Estate News
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Estimate
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Join resiuatzview.com.au
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Real Estate Apps
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Make an Offer
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Location Profiles
-              </Link>
-            </li>
-          </ul>
+          <ul className="flex flex-col gap-4">{footerColOne()}</ul>
         </div>
         <div className="w-1/4 max-lg:hidden">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Agency Sign Up
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Find A Real Estate Agent
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Auction and Sales Results Victoria
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Auction and Sales Results by Suburb
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Real Estate Advice
-              </Link>
-            </li>
-          </ul>
+          <ul className="flex flex-col gap-4">{footerColTwo()}</ul>
         </div>
         <div className="w-1/4 max-lg:hidden">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Real Estate For Sale
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Rental Properties
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Recently Sold Properties
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                New Developments
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                View Insurance
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="lg:hidden max-lg:w-1/2">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Agent Login
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                About us
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="#" className="hover:text-blue-600 hover:underline">
-                FAQs
-              </Link>
-            </li>
-          </ul>
+          <ul className="flex flex-col gap-4">{footerColThree()}</ul>
         </div>
         <div className="w-1/4 max-lg:w-1/2">
-          <ul className="flex flex-col gap-4">
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Terms & Conditions
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Privacy Policy
-              </Link>
-            </li>
-            <li>
-              <Link href="" className="hover:text-blue-600 hover:underline">
-                Sitemap
-              </Link>
-            </li>
-          </ul>
+          <ul className="flex flex-col gap-4">{footerColFour()}</ul>
+        </div>
+        <div className="lg:hidden max-lg:w-1/2">
+          <ul className="flex flex-col gap-4">{OtherServices()}</ul>
         </div>
       </section>
       <hr className="w-full" />
@@ -231,3 +72,77 @@ const Footer: () => JSX.Element = () => {
 };
 
 export default Footer;
+
+const socialMediaIcons = (): JSX.Element[] => {
+  return Images.slice(2, 7).map((image) => {
+    return (
+      <Link href="#">
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          className={image.className}
+        />
+      </Link>
+    );
+  });
+};
+
+const OtherServices = (): JSX.Element[] => {
+  return otherServices.slice(10, 14).map((service) => {
+    return (
+      <Link href="#" className="hover:text-blue-600 hover:underline">
+        {service.name}
+      </Link>
+    );
+  });
+};
+
+const footerColOne = () => {
+  return servicesInFooter.slice(0, 6).map((service) => {
+    return (
+      <li>
+        <Link href="#" className="hover:text-blue-600 hover:underline">
+          {service}
+        </Link>
+      </li>
+    );
+  });
+};
+
+const footerColTwo = () => {
+  return servicesInFooter.slice(6, 11).map((service) => {
+    return (
+      <li>
+        <Link href="#" className="hover:text-blue-600 hover:underline">
+          {service}
+        </Link>
+      </li>
+    );
+  });
+};
+
+const footerColThree = () => {
+  return servicesInFooter.slice(11, 16).map((service) => {
+    return (
+      <li>
+        <Link href="#" className="hover:text-blue-600 hover:underline">
+          {service}
+        </Link>
+      </li>
+    );
+  });
+};
+
+const footerColFour = () => {
+  return servicesInFooter.slice(16, 19).map((service) => {
+    return (
+      <li>
+        <Link href="#" className="hover:text-blue-600 hover:underline">
+          {service}
+        </Link>
+      </li>
+    );
+  });
+};
