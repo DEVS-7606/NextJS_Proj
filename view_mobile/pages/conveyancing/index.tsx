@@ -1,10 +1,11 @@
-import Main from "../../components/mobileMain/main";
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
+import Main from "@/components/conveyancingMain/main";
+import Footer from "@/components/footer/footer";
+import Header from "@/components/header/header";
 import SideNavbar from "@/components/sideNavbar/sideNavbar";
+import Head from "next/head";
 import { useState } from "react";
 
-const MobileView = (): JSX.Element => {
+const Conveyancing = () => {
   const [showSideNavbar, setShowSideideNavbar] = useState(false);
 
   const toggleNavbar = (): void => {
@@ -13,6 +14,9 @@ const MobileView = (): JSX.Element => {
 
   return (
     <>
+      <Head>
+        <title>Conveyancing with Settle Easy - view.com.au </title>
+      </Head>
       <Header toogleNavbar={toggleNavbar} toogleValue={showSideNavbar} />
       <Main />
       <Footer />
@@ -21,4 +25,4 @@ const MobileView = (): JSX.Element => {
   );
 };
 
-export default MobileView;
+export default Conveyancing;

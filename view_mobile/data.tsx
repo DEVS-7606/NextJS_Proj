@@ -17,6 +17,8 @@ import LinkedIn from "@/public/images/linkedIn.svg";
 import Pinterest from "@/public/images/pinterest.svg";
 import mobileView from "@/public/images/landing-page-mobile.cc546c66.jpg";
 import desktopView from "@/public/images/landing-page-desktop.jpg";
+import settleEasy from "@/public/images/settle-easy.svg";
+import Link from "next/link";
 
 export interface ofServices {
   name: string;
@@ -157,4 +159,18 @@ export const Images: images[] = [
     height: 384,
     className: "",
   },
+  {
+    src: settleEasy,
+    alt: "settle easy",
+    width: 120,
+    height: 120,
+    className: "max-md:w-14 max-md:h-14",
+  },
+];
+
+export const InputFields = [
+  { title: "First Name *", id: "firstName", type: "text" },
+  { title: "Last Name *", id: "lastName", type: "text" },
+  { title: "Email *", id: "emailId", type: "text" },
+  { title: "Phone *", id: "phone", type: "number" },
 ];

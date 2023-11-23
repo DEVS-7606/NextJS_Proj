@@ -21,9 +21,11 @@ const config: Config = {
         saltWhite: "#E8F4FD",
         seaBlue: "#0073cf",
         darkerSeaBlue: "#0464b0",
+        errorRed: "#ef4444",
       },
       fontSize: {
         44: "44px",
+        74: "74px",
       },
       lineHeight: {
         52: "52px",
@@ -37,6 +39,16 @@ const config: Config = {
         120: "120px",
         350: "350px",
         300: "300px",
+        326: "326px",
+        720: "720px",
+      },
+      height: {
+        446: "446px",
+        437: "437px",
+        198: "198px",
+      },
+      maxWidth: {
+        1200: "1200px",
       },
     },
   },

@@ -1,11 +1,8 @@
-import { NextRouter, useRouter } from "next/router";
 import { useEffect } from "react";
 
-const Home: () => JSX.Element = () => {
-  const router:NextRouter = useRouter();
-
+const Home = (): JSX.Element => {
   useEffect(() => {
-    router.push("/mobile");
+    window.location.assign("/conveyancing");
   }, []);
 
   return <p>Loading...</p>;

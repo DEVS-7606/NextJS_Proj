@@ -3,11 +3,17 @@
 @tailwind utilities;
 
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .headLine {
   font-family: "Golos Text", sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
