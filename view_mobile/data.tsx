@@ -191,7 +191,6 @@ export const FreqAskedQues = [
         land from one person or entity to another.
       </p>,
     ],
-    className: `pb-4 h-16`,
   },
   {
     ques: "What is a conveyancer?",
@@ -202,7 +201,6 @@ export const FreqAskedQues = [
         purchase and sale of properties, settlements and title transfers.
       </p>,
     ],
-    className: `pb-4 h-16`,
   },
   {
     ques: "How much does it cost?",
@@ -227,7 +225,6 @@ export const FreqAskedQues = [
         bought or sold and where that property is located.
       </p>,
     ],
-    className: `pb-4 h-52`,
   },
   {
     ques: "What types of conveyancing does Settle Easy do?",
@@ -235,7 +232,9 @@ export const FreqAskedQues = [
       <p>
         Our experienced team specialise in all types of conveyancing including:
       </p>,
-      <ul className="pl-2 list-disc list-inside">
+      <ul
+        style={{ paddingLeft: 8, listStyleType: "disc", listStyle: "inside" }}
+      >
         <li>residential properties</li>
         <li>large scale off the plan property developments</li>
         <li>retirement village residences</li>
@@ -244,7 +243,6 @@ export const FreqAskedQues = [
         <li>properties for self-managed superannuation funds (SMSFs).</li>
       </ul>,
     ],
-    className: `pb-4 h-52`,
   },
   {
     ques: "How will I know what's happening?",
@@ -259,7 +257,6 @@ export const FreqAskedQues = [
         through the process and answer any questions you may have.
       </p>,
     ],
-    className: `pb-4 h-24`,
   },
 ];
 

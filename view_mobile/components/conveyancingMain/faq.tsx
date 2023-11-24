@@ -1,5 +1,6 @@
 import { FreqAskedQues } from "@/data";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+type AnswerRef = React.MutableRefObject<HTMLDivElement | null>;
 
 const FAQ = (): JSX.Element => {
   const [show, setShow] = useState<Record<string, number | boolean>[]>([
@@ -10,23 +11,34 @@ const FAQ = (): JSX.Element => {
     { id: 5, value: false },
   ]);
 
-  const showAns = (objId: number): void => {
-    console.log(objId);
-
-    const updateShowState = show.map((obj) => {
-      if (obj.id === objId) {
-        return { ...obj, value: !obj.value };
-      }
-      return obj;
-    });
-
-    setShow(updateShowState);
-  };
-
   const Queries = () => {
+    const answerRefs: AnswerRef[] = FreqAskedQues.map(() => useRef(null));
+
+    useEffect(() => {
+      // This effect runs after the component has mounted
+      answerRefs.forEach((ref, index) => {
+        const contentHeight = ref.current?.scrollHeight || 0;
+        ref.current?.style.setProperty(
+          "max-height",
+          show[index].value ? `${contentHeight}px` : "0px"
+        );
+      });
+    }, [show, answerRefs]);
+
+    const showAns = (objId: number): void => {
+      const updateShowState = show.map((obj, index) => {
+        if (obj.id === objId) {
+          return { ...obj, value: !obj.value };
+        }
+        return obj;
+      });
+
+      setShow(updateShowState);
+    };
+
     return FreqAskedQues.map((query, index) => {
       return (
-        <div className="border-b" key={index}>
+        <div className={index === 4 ? "border-none" : "border-b"} key={index}>
           <div
             className="flex items-center justify-between cursor-pointer py-sm"
             onClick={() => showAns(index + 1)}
@@ -39,8 +51,9 @@ const FAQ = (): JSX.Element => {
             </span>
           </div>
           <div
-            className={`text-sm font-normal transition-all duration-500 overflow-hidden h-0 flex flex-col gap-3 ${
-              show[index].value && `${query.className}`
+            ref={answerRefs[index]}
+            className={`text-sm font-normal transition-all duration-500 overflow-hidden flex flex-col gap-3 ${
+              show[index].value ? "mb-4" : "collapsed"
             }`}
           >
             {query.ans}

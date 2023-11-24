@@ -59,7 +59,7 @@ const CustomerReview = (): JSX.Element => {
           </div>
           <div
             className={`overflow-hidden transition-all duration-500 h-[75px] ${
-              showFullReview[index].value && "h-72 max-h-full"
+              showFullReview[index].value && "h-[264px] max-h-full"
             }`}
           >
             {review.review}
