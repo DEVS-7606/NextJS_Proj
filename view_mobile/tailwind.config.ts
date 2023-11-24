@@ -22,6 +22,7 @@ const config: Config = {
         seaBlue: "#0073cf",
         darkerSeaBlue: "#0464b0",
         errorRed: "#ef4444",
+        shirtBlue: "#f6f6f6",
       },
       fontSize: {
         44: "44px",
@@ -49,6 +50,9 @@ const config: Config = {
       },
       maxWidth: {
         1200: "1200px",
+      },
+      padding: {
+        sm: "14px",
       },
     },
   },

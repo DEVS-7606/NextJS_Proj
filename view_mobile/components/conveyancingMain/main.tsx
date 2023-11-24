@@ -1,3 +1,4 @@
+import CustomerReview from "./customerReview";
 import FAQ from "./faq";
 import HeroSection from "./hero";
 import VoucherDetails from "./voucherDetails";
@@ -8,6 +9,7 @@ const Main = () => {
       <HeroSection />
       <VoucherDetails />
       <FAQ />
+      <CustomerReview />
     </div>
   );
 };

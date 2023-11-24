@@ -131,8 +131,6 @@ const VoucherDetails = (): JSX.Element => {
   const output = () => {
     const dataOutput = Object.entries(userInput);
 
-    console.log(dataOutput);
-
     return (
       <div className="border-2 rounded-xl fill-almostBlack bg-white">
         {dataOutput.map(([key, value]) => (

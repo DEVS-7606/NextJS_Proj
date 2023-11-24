@@ -18,7 +18,7 @@ import Pinterest from "@/public/images/pinterest.svg";
 import mobileView from "@/public/images/landing-page-mobile.cc546c66.jpg";
 import desktopView from "@/public/images/landing-page-desktop.jpg";
 import settleEasy from "@/public/images/settle-easy.svg";
-import Link from "next/link";
+import star from "@/public/images/star.svg";
 
 export interface ofServices {
   name: string;
@@ -166,6 +166,13 @@ export const Images: images[] = [
     height: 120,
     className: "max-md:w-14 max-md:h-14",
   },
+  {
+    src: star,
+    alt: "star",
+    width: 20,
+    height: 20,
+    className: "",
+  },
 ];
 
 export const InputFields = [
@@ -173,4 +180,36 @@ export const InputFields = [
   { title: "Last Name *", id: "lastName", type: "text" },
   { title: "Email *", id: "emailId", type: "text" },
   { title: "Phone *", id: "phone", type: "number" },
+];
+
+export const FreqAskedQues = [
+  {
+    ques: "What is conveyancing?",
+    ans: "Conveyancing is the process of moving the legal ownership of property or land from one person or entity to another.",
+  },
+  {
+    ques: "What is a conveyancer?",
+    ans: "A conveyancer is a property transfer specialist. They prepare the legal documents that form part of real estate transactions such as the purchase and sale of properties, settlements and title transfers.",
+  },
+];
+
+export const customerReview = [
+  {
+    duration: "4 weeks ago",
+    review:
+      "Marie was excellent, very prompt, clear and friendly. Would recommend for first home buyers who want to be kept in the loop and shown all the steps.",
+    name: "Jake Curtis",
+  },
+  {
+    duration: "2 weeks ago",
+    review:
+      "We were fortunate enough to have Carley from Settle Easy help us with our first home purchase. We feel incredibly lucky that we had her to explain the different parts of the process and answer the many questions we had. We said to one another multiple times 'Thank god for Carley, she's incredible.' It meant a lot that she was so forward with getting details, and advocating for us with the sellers and always keeping us up to date with what was happening. We can't thank her enough for everything she did for us.",
+    name: "Brendan Freeman",
+  },
+  {
+    duration: "2 weeks ago",
+    review:
+      "We are first time property buyers and were buying a block of land - Carley from Settle Easy was absolutely amazing from start to finish. She went above and beyond at every single stage of the process, keeping us in the loop the entire time, explaining what she was doing and why, making sure we understood what was happening. Buying a property is stressful enough, you don't need the extra worry of a Conveyancer that needs constant chasing. Incredible service!",
+    name: "Emma Gerts",
+  },
 ];
