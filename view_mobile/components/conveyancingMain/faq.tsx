@@ -1,8 +1,7 @@
-import { FreqAskedQues } from "@/data";
 import { useState } from "react";
 
-const FAQ = () => {
-  const [show, setShow] = useState([
+const FAQ = (): JSX.Element => {
+  const [show, setShow] = useState<Record<string, number | boolean>[]>([
     { id: 1, value: false },
     { id: 2, value: false },
     { id: 3, value: false },
@@ -21,7 +20,7 @@ const FAQ = () => {
     setShow(updateShowState);
   };
 
-  const QueryOne = (
+  const QueryOne: JSX.Element = (
     <div className="border-b">
       <div
         className="flex items-center justify-between cursor-pointer py-sm"
@@ -49,7 +48,7 @@ const FAQ = () => {
       </div>
     </div>
   );
-  const QueryTwo = (
+  const QueryTwo: JSX.Element = (
     <div className="border-b">
       <div
         className="flex items-center justify-between cursor-pointer py-sm"
@@ -78,7 +77,7 @@ const FAQ = () => {
       </div>
     </div>
   );
-  const QueryThree = (
+  const QueryThree: JSX.Element = (
     <div className="border-b">
       <div
         className="flex items-center justify-between cursor-pointer py-sm"
@@ -121,7 +120,7 @@ const FAQ = () => {
       </div>
     </div>
   );
-  const QueryFour = (
+  const QueryFour: JSX.Element = (
     <div className="border-b">
       <div
         className="flex items-center justify-between cursor-pointer py-sm"
@@ -157,7 +156,7 @@ const FAQ = () => {
       </div>
     </div>
   );
-  const QueryFive = (
+  const QueryFive: JSX.Element = (
     <div className="border-none">
       <div
         className="flex items-center justify-between cursor-pointer py-sm"

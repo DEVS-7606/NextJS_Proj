@@ -1,25 +1,17 @@
 import { InputFields } from "@/data";
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useState } from "react";
 import Input from "../shared/Input";
 import Link from "next/link";
-
-export interface individualUser {
-  firstName: string;
-  lastName: string;
-  emailId: string;
-  phone: number;
-  state: string;
-  comments?: string;
-}
 
 const VoucherDetails = (): JSX.Element => {
   const [userInput, setUserInput] = useState<Record<string, string>>({});
   const [error, setError] = useState<Record<string, string>>({});
 
-  let emailValidationPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
-  let phoneNumberValidationPattern = /^[6-9]{1}[0-9]{9}$/;
+  let emailValidationPattern: RegExp =
+    /^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+  let phoneNumberValidationPattern: RegExp = /^[6-9]{1}[0-9]{9}$/;
 
-  const youtubeLink = (
+  const youtubeLink: JSX.Element = (
     <iframe
       width="100%"
       height="100%"
@@ -32,7 +24,7 @@ const VoucherDetails = (): JSX.Element => {
     ></iframe>
   );
 
-  const voucherDesc = (
+  const voucherDesc: JSX.Element = (
     <div className="flex flex-col gap-4 text-base text-almostBlack ">
       <p>
         In partnership with view.com.au,{" "}
@@ -73,7 +65,7 @@ const VoucherDetails = (): JSX.Element => {
     </div>
   );
 
-  const formFields = () => {
+  const formFields = (): JSX.Element[] => {
     return InputFields.map((attributes, index) => {
       return (
         <Input
@@ -88,7 +80,7 @@ const VoucherDetails = (): JSX.Element => {
     });
   };
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = (event: FormEvent<HTMLFormElement>): void => {
     let errors: Record<string, string> = {};
     let userDetails: Record<string, string> = {};
     const formData = new FormData(event.currentTarget);
@@ -128,7 +120,7 @@ const VoucherDetails = (): JSX.Element => {
     return setUserInput(userDetails);
   };
 
-  const output = () => {
+  const output = (): JSX.Element => {
     const dataOutput = Object.entries(userInput);
 
     return (
@@ -142,9 +134,8 @@ const VoucherDetails = (): JSX.Element => {
     );
   };
 
-  const select = (
+  const select: JSX.Element = (
     <>
-      {" "}
       <label className="flex flex-col font-medium" htmlFor="state">
         State *
         <select
@@ -167,7 +158,7 @@ const VoucherDetails = (): JSX.Element => {
     </>
   );
 
-  const commentSection = (
+  const commentSection: JSX.Element = (
     <label className="flex flex-col font-medium" htmlFor="comments">
       Comments or message
       <textarea
@@ -180,7 +171,7 @@ const VoucherDetails = (): JSX.Element => {
     </label>
   );
 
-  const submitButton = (
+  const submitButton: JSX.Element = (
     <button
       type="submit"
       value=""

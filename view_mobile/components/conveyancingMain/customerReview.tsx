@@ -12,12 +12,13 @@ const CustomerReview = (): JSX.Element => {
   ]);
 
   const fullReviewButton = (objId: number, objValue: boolean): void => {
-    const updateReviews = showFullReview.map((obj) => {
-      if (obj.id === objId) {
-        return { ...obj, value: objValue };
-      }
-      return obj;
-    });
+    const updateReviews: Record<string, number | boolean>[] =
+      showFullReview.map((obj) => {
+        if (obj.id === objId) {
+          return { ...obj, value: objValue };
+        }
+        return obj;
+      });
 
     setShowFullReview(updateReviews);
   };
