@@ -185,11 +185,81 @@ export const InputFields = [
 export const FreqAskedQues = [
   {
     ques: "What is conveyancing?",
-    ans: "Conveyancing is the process of moving the legal ownership of property or land from one person or entity to another.",
+    ans: [
+      <p>
+        Conveyancing is the process of moving the legal ownership of property or
+        land from one person or entity to another.
+      </p>,
+    ],
+    className: `pb-4 h-16`,
   },
   {
     ques: "What is a conveyancer?",
-    ans: "A conveyancer is a property transfer specialist. They prepare the legal documents that form part of real estate transactions such as the purchase and sale of properties, settlements and title transfers.",
+    ans: [
+      <p>
+        A conveyancer is a property transfer specialist. They prepare the legal
+        documents that form part of real estate transactions such as the
+        purchase and sale of properties, settlements and title transfers.
+      </p>,
+    ],
+    className: `pb-4 h-16`,
+  },
+  {
+    ques: "How much does it cost?",
+    ans: [
+      <p>
+        Whether you are buying or selling property, our services are set at a
+        fixed price.
+      </p>,
+      <p>The only cost variable relates to disbursements.</p>,
+      <p>
+        We don't want you to be worried about the word 'disbursements' - it's
+        just an everyday legal term used to describe out of pocket expenses and
+        all property transactions in Australia will incur some of these.
+      </p>,
+      <p>
+        We'll always be upfront about your conveyancing costs, so as soon as you
+        ask us to help you, we can provide you with an estimate of how much your
+        disbursements are likely to be.
+      </p>,
+      <p>
+        These out of pocket costs all depend on the type of property you have
+        bought or sold and where that property is located.
+      </p>,
+    ],
+    className: `pb-4 h-52`,
+  },
+  {
+    ques: "What types of conveyancing does Settle Easy do?",
+    ans: [
+      <p>
+        Our experienced team specialise in all types of conveyancing including:
+      </p>,
+      <ul className="pl-2 list-disc list-inside">
+        <li>residential properties</li>
+        <li>large scale off the plan property developments</li>
+        <li>retirement village residences</li>
+        <li>commercial properties</li>
+        <li>properties within trust structures</li>
+        <li>properties for self-managed superannuation funds (SMSFs).</li>
+      </ul>,
+    ],
+    className: `pb-4 h-52`,
+  },
+  {
+    ques: "How will I know what's happening?",
+    ans: [
+      <p>
+        At Settle Easy, we are committed to keeping you updated every step of
+        the way.
+      </p>,
+      <p>
+        As a registered customer, you will be able to track each stage of your
+        transaction and you will have a dedicated conveyancer to guide you
+        through the process and answer any questions you may have.
+      </p>,
+    ],
+    className: `pb-4 h-24`,
   },
 ];
 
