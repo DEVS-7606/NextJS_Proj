@@ -1,10 +1,10 @@
-import { Images, otherServices, servicesInFooter } from "@/data";
+import { IMAGES, SERVICESINFOOTER, OTHERSERVICES } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer: () => JSX.Element = () => {
   const socialMediaIcons = (): JSX.Element[] => {
-    return Images.slice(2, 7).map((image, index) => {
+    return IMAGES.slice(2, 7).map((image, index) => {
       return (
         <Link href="#" key={index}>
           <Image
@@ -20,7 +20,7 @@ const Footer: () => JSX.Element = () => {
   };
 
   const OtherServices = (): JSX.Element[] => {
-    return otherServices.slice(10, 14).map((service, index) => {
+    return OTHERSERVICES.slice(10, 14).map((service, index) => {
       return (
         <Link
           href="#"
@@ -34,7 +34,7 @@ const Footer: () => JSX.Element = () => {
   };
 
   const footerCol = (start: number, end: number) => {
-    return servicesInFooter.slice(start, end).map((service, index) => {
+    return SERVICESINFOOTER.slice(start, end).map((service, index) => {
       return (
         <li key={index}>
           <Link href="#" className="hover:text-blue-600 hover:underline">

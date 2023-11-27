@@ -47,12 +47,17 @@ const config: Config = {
         446: "446px",
         437: "437px",
         198: "198px",
+        "120px": "120px",
       },
       maxWidth: {
         1200: "1200px",
       },
       padding: {
         sm: "14px",
+      },
+      spacing: {
+        52: "52px",
+        68: "68px",
       },
     },
   },

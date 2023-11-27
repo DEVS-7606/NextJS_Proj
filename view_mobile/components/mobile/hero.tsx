@@ -1,8 +1,24 @@
-import { Images } from "@/data";
+import { IMAGES } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const HeroSection: () => JSX.Element = () => {
+  const downloadAppLinkImages = (): JSX.Element[] => {
+    return IMAGES.slice(0, 2).map((image, index) => {
+      return (
+        <Link href="#" key={index}>
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            className={image.className}
+          />
+        </Link>
+      );
+    });
+  };
+
   return (
     <section className="bg-saltWhite text-start rounded-xl px-14 py-10 text-almostBlack flex flex-col gap-2 max-lg:gap-5 max-md:px-6 max-md:py-6 max-xs:gap-4">
       <h1 className="text-74 leading-82 xl:px-2 headLine w-2/3 max-lg:text-44 max-lg:leading-52 max-md:w-full">
@@ -21,19 +37,3 @@ const HeroSection: () => JSX.Element = () => {
 };
 
 export default HeroSection;
-
-const downloadAppLinkImages = (): JSX.Element[] => {
-  return Images.slice(0, 2).map((image, index) => {
-    return (
-      <Link href="#" key={index}>
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          className={image.className}
-        />
-      </Link>
-    );
-  });
-};

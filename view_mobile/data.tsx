@@ -20,13 +20,13 @@ import desktopView from "@/public/images/landing-page-desktop.jpg";
 import settleEasy from "@/public/images/settle-easy.svg";
 import star from "@/public/images/star.svg";
 
-export interface ofServices {
+export interface Services {
   name: string;
   isHavingImage: boolean;
   image?: { src: string; alt: string; width: number; height: number };
 }
 
-export const services: ofServices[] = [
+export const SERVICES: Services[] = [
   { name: "Buy", isHavingImage: false },
   { name: "Rent", isHavingImage: false },
   { name: "Sold", isHavingImage: false },
@@ -48,7 +48,7 @@ export interface OtherServices {
   image?: { src: string; alt: string };
 }
 
-export const otherServices: OtherServices[] = [
+export const OTHERSERVICES: OtherServices[] = [
   { name: "New Developments", image: { src: rocket, alt: "rocket" } },
   { name: "Price Estimate", image: { src: scale, alt: "scales" } },
   { name: "Find Agents", image: { src: users, alt: "users" } },
@@ -65,7 +65,7 @@ export const otherServices: OtherServices[] = [
   { name: "FAQs" },
 ];
 
-export const servicesInFooter: string[] = [
+export const SERVICESINFOOTER: string[] = [
   "Real Estate News",
   "Estimate",
   "Join resiuatzview.com.au",
@@ -95,7 +95,7 @@ export interface images {
   className: string;
 }
 
-export const Images: images[] = [
+export const IMAGES: images[] = [
   {
     src: appStore,
     alt: "app-store link",
@@ -162,9 +162,9 @@ export const Images: images[] = [
   {
     src: settleEasy,
     alt: "settle easy",
-    width: 120,
-    height: 120,
-    className: "max-md:w-14 max-md:h-14",
+    width: 56,
+    height: 56,
+    className: "md:w-24 md:h-24 lg:w-30 lg:h-30",
   },
   {
     src: star,
@@ -175,14 +175,14 @@ export const Images: images[] = [
   },
 ];
 
-export const InputFields = [
+export const INPUTFIELDS = [
   { title: "First Name *", id: "firstName", type: "text" },
   { title: "Last Name *", id: "lastName", type: "text" },
   { title: "Email *", id: "emailId", type: "text" },
   { title: "Phone *", id: "phone", type: "number" },
 ];
 
-export const FreqAskedQues = [
+export const FREQ_ASKED_QUES = [
   {
     ques: "What is conveyancing?",
     ans: [
@@ -260,7 +260,7 @@ export const FreqAskedQues = [
   },
 ];
 
-export const customerReview = [
+export const REVIEWS = [
   {
     duration: "4 weeks ago",
     review:

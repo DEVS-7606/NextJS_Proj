@@ -1,10 +1,10 @@
-import { otherServices, services } from "@/data";
+import { OTHERSERVICES, SERVICES } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const SideNavbar = (props: { showSideNavbar: boolean }): JSX.Element => {
   const viewMainServices = (): JSX.Element[] => {
-    return services.slice(0, 3).map((service, index) => {
+    return SERVICES.slice(0, 3).map((service, index) => {
       return (
         <li className="text-2xl" key={index}>
           <Link href="#">{service.name}</Link>
@@ -14,7 +14,7 @@ const SideNavbar = (props: { showSideNavbar: boolean }): JSX.Element => {
   };
 
   const viewOtherServices = (start: number, end: number): JSX.Element[] => {
-    return otherServices.slice(start, end).map((service, index) => {
+    return OTHERSERVICES.slice(start, end).map((service, index) => {
       return (
         <li className="text-grayType" key={index}>
           <Link

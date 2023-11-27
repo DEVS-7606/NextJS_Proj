@@ -1,8 +1,38 @@
-import { Images } from "@/data";
+import { IMAGES } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const DesktopPageView: () => JSX.Element = () => {
+  const downloadAppLinkImages = (): JSX.Element[] => {
+    return IMAGES.slice(0, 2).map((image) => {
+      return (
+        <Link href="#">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            className={image.className}
+          />
+        </Link>
+      );
+    });
+  };
+
+  const desktopImage = (): JSX.Element[] => {
+    return IMAGES.slice(8, 9).map((image) => {
+      return (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          className={image.className}
+        />
+      );
+    });
+  };
+
   return (
     <section
       className="text-start flex flex-row-reverse px-16 py-10 items-center
@@ -31,33 +61,3 @@ justify-start flex-col gap-4 max-lg:w-full max-lg:px-0 max-lg:gap-4"
 };
 
 export default DesktopPageView;
-
-const downloadAppLinkImages = (): JSX.Element[] => {
-  return Images.slice(0, 2).map((image) => {
-    return (
-      <Link href="#">
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          className={image.className}
-        />
-      </Link>
-    );
-  });
-};
-
-const desktopImage = (): JSX.Element[] => {
-  return Images.slice(8, 9).map((image) => {
-    return (
-      <Image
-        src={image.src}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
-        className={image.className}
-      />
-    );
-  });
-};

@@ -1,11 +1,13 @@
-import { services } from "@/data";
+import { SERVICES } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = (props: {
+interface IProps {
   toogleNavbar: () => void;
   toogleValue: boolean;
-}): JSX.Element => {
+}
+
+const Header = (props: IProps): JSX.Element => {
   const hamBurgerSVG: JSX.Element = (
     <svg
       className="hb"
@@ -66,7 +68,7 @@ const Header = (props: {
   );
 
   const viewServices = (): JSX.Element[] => {
-    return services.map((service, index) => {
+    return SERVICES.map((service, index) => {
       return (
         <li
           key={index}
@@ -111,7 +113,7 @@ const Header = (props: {
           </span>
         </button>
       </div>
-      <hr className="absolute top-[68px] w-full right-0 max-xl:top-[52px]" />
+      <hr className="absolute top-68 w-full right-0 max-xl:top-52" />
     </div>
   );
 };

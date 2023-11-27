@@ -1,8 +1,38 @@
-import { Images } from "@/data";
+import { IMAGES } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 const MobilePageView: () => JSX.Element = () => {
+  const downloadAppLinkImages = (): JSX.Element[] => {
+    return IMAGES.slice(0, 2).map((image) => {
+      return (
+        <Link href="#">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            width={image.width}
+            height={image.height}
+            className={image.className}
+          />
+        </Link>
+      );
+    });
+  };
+
+  const mobileImage = (): JSX.Element[] => {
+    return IMAGES.slice(7, 8).map((image) => {
+      return (
+        <Image
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          className={image.className}
+        />
+      );
+    });
+  };
+
   return (
     <section className="text-start flex px-16 py-24 items-center max-lg:flex-col max-lg:px-0 max-lg:text-center max-lg:gap-2 max-lg:pt-16 max-lg:pb-10 max-xs:pb-16 ">
       <div className="w-1/2 flex flex-col gap-4 max-lg:w-full ">
@@ -25,33 +55,3 @@ const MobilePageView: () => JSX.Element = () => {
 };
 
 export default MobilePageView;
-
-const downloadAppLinkImages = (): JSX.Element[] => {
-  return Images.slice(0, 2).map((image) => {
-    return (
-      <Link href="#">
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
-          className={image.className}
-        />
-      </Link>
-    );
-  });
-};
-
-const mobileImage = (): JSX.Element[] => {
-  return Images.slice(7, 8).map((image) => {
-    return (
-      <Image
-        src={image.src}
-        alt={image.alt}
-        width={image.width}
-        height={image.height}
-        className={image.className}
-      />
-    );
-  });
-};
