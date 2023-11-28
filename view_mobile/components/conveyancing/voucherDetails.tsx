@@ -65,7 +65,7 @@ const VoucherDetails = (): JSX.Element => {
         <div className="lg:inline hidden">{conveyancingDetails}</div>
       </div>
       <Form />
-      <div className="lg: inline">{conveyancingDetails}</div>
+      <div className="lg:hidden inline ">{conveyancingDetails}</div>
     </section>
   );
 };

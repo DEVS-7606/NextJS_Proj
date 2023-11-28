@@ -52,7 +52,9 @@ const CustomerReview = (props: Iprops): JSX.Element => {
         <Image
           src={downArrow}
           alt="downArrow"
-          className={`${showFullReview && "transform rotate-180 duration-500"}`}
+          className={`transform duration-500 ${
+            showFullReview ? "rotate-180" : "rotate-0"
+          }`}
         />
       </div>
       <div className="text-sm font-bold mt-4">{props.reviewer}</div>
