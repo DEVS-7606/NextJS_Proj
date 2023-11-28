@@ -34,8 +34,8 @@ const MobilePageView: () => JSX.Element = () => {
   };
 
   return (
-    <section className="text-start flex px-16 py-24 items-center max-lg:flex-col max-lg:px-0 max-lg:text-center max-lg:gap-2 max-lg:pt-16 max-lg:pb-10 max-xs:pb-16 ">
-      <div className="w-1/2 flex flex-col gap-4 max-lg:w-full ">
+    <section className="text-center lg:text-start flex px-0 lg:px-16 py-24 items-center flex-col lg:flex-row gap-2 lg:gap-0 pt-16 lg:pt-0 xs:pb-10 pb-16 ">
+      <div className="w-full lg:w-1/2 flex flex-col gap-4">
         <h2 className="font-bold text-2xl ">Save and track.</h2>
         <p className="font-normal text-base text-lightGray">
           Shortlist your favorite properties to keep track of upcoming open for
@@ -43,11 +43,11 @@ const MobilePageView: () => JSX.Element = () => {
           to sync your saved properties between your computer and mobile
           devices.
         </p>
-        <div className="flex gap-4 my-8 max-lg:px-8 max-xxs:px-4 max-lg:justify-center max-lg:mt-0 items-center">
+        <div className="flex gap-4 my-8 lg:px-0 xxs:px-8 px-4 justify-center lg:justify-normal mt-0 lg:mt-auto items-center">
           {downloadAppLinkImages()}
         </div>
       </div>
-      <div className="w-1/2 flex justify-end max-lg:justify-start max-lg:w-full max-lg:px-20 max-sm:justify-center">
+      <div className="flex lg:justify-end sm:justify-start justify-center w-full lg:w-1/2 px-20 lg:px-0">
         {mobileImage()}
       </div>
     </section>

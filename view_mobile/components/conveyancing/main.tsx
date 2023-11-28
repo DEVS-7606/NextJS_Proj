@@ -7,8 +7,8 @@ import { FREQ_ASKED_QUES, REVIEWS } from "@/data";
 const Main = (): JSX.Element => {
   const renderFaq = () => {
     return (
-      <div className="w-3/5 max-lg:w-full mb-4">
-        <section className="flex items-center text-almostBlack mb-6 max-lg:mb-4">
+      <div className="lg:w-3/5 w-full mb-4">
+        <section className="flex items-center text-almostBlack lg:mb-6 mb-4">
           <h2 className="text-2xl font-bold bg-opacity-0 text-start  tracking-wider">
             Frequently Asked Questions
           </h2>

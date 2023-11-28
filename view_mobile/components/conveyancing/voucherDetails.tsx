@@ -57,15 +57,15 @@ const VoucherDetails = (): JSX.Element => {
   );
 
   return (
-    <section className="flex gap-6 items-start w-full max-lg:flex-col">
+    <section className="flex gap-6 items-start w-full flex-col lg:flex-row">
       <div className="w-3/5 flex flex-col gap-6 max-lg:w-full">
-        <div className="h-437 max-lg:h-full max-md:h-52 rounded-xl bg-almostBlack fill-almostBlack border-2 overflow-hidden">
+        <div className="h-56 lg:h-437 md:h-full rounded-xl bg-almostBlack fill-almostBlack border-2 overflow-hidden">
           {youtubeLink}
         </div>
-        <div className="max-lg:hidden">{conveyancingDetails}</div>
+        <div className="lg:inline hidden">{conveyancingDetails}</div>
       </div>
       <Form />
-      <div className="lg:hidden">{conveyancingDetails}</div>
+      <div className="lg: inline">{conveyancingDetails}</div>
     </section>
   );
 };

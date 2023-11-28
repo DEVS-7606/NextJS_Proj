@@ -46,40 +46,37 @@ const Footer: () => JSX.Element = () => {
   };
 
   return (
-    <footer className="max-w-1200 mx-auto text-lightGray flex flex-col gap-8 text-base py-0 max-lg:text-center max-lg:px-4">
-      <section className="flex flex-row justify-between max-lg:justify-center">
+    <footer className="max-w-1200 mx-auto text-lightGray flex flex-col gap-8 text-base py-0 text-center lg:text-start px-4 lg:px-0">
+      <section className="flex flex-row lg:justify-between justify-center">
         <div className="flex flex-row justify-evenly gap-8">
           {socialMediaIcons()}
         </div>
-        <div className="flex flex-row justify-evenly gap-8 max-lg:hidden">
+        <div className="lg:flex flex-row justify-evenly gap-8 hidden">
           {OtherServices()}
         </div>
       </section>
       <hr className="w-full" />
-      <section className="flex text-left w-full max-lg:justify-center max-lg:text-center max-lg:flex-row-reverse">
-        <div className="w-1/4 max-lg:hidden">
+      <section className="flex lg:text-left w-full lg:justify-normal justify-center text-center flex-row-reverse lg:flex-row">
+        <div className="w-1/4 max-lg:hidden lg:inline">
           <ul className="flex flex-col gap-4">{footerCol(0, 6)}</ul>
         </div>
-        <div className="w-1/4 max-lg:hidden">
+        <div className="w-1/4 max-lg:hidden lg:inline">
           <ul className="flex flex-col gap-4">{footerCol(6, 11)}</ul>
         </div>
-        <div className="w-1/4 max-lg:hidden">
+        <div className="w-1/4 max-lg:hidden lg:inline">
           <ul className="flex flex-col gap-4">{footerCol(11, 16)}</ul>
         </div>
-        <div className="w-1/4 max-lg:w-1/2">
+        <div className="lg:w-1/4 w-1/2">
           <ul className="flex flex-col gap-4">{footerCol(16, 19)}</ul>
         </div>
-        <div className="lg:hidden max-lg:w-1/2">
+        <div className="lg:hidden lg:w-full w-1/2">
           <ul className="flex flex-col gap-4">{OtherServices()}</ul>
         </div>
       </section>
       <hr className="w-full" />
-      <section className="flex flex-col gap-4 max-lg:justify-center">
-        <div className="w-full flex justify-between max-lg:flex-col max-lg:justify-center max-lg:gap-2">
-          <div
-            className="w-3/4 max-lg:w-full 
-          max-lg:flex max-lg:justify-center"
-          >
+      <section className="flex flex-col gap-4 justify-center lg:justify-normal">
+        <div className="w-full flex lg:justify-between flex-col lg:flex-row justify-center gap-2 lg:gap-0">
+          <div className="lg:w-3/4 w-full lg:flex-none flex lg:justify-normal justify-center">
             <Link href="#">
               <Image
                 src="/images/viewLogo.svg"
@@ -89,8 +86,8 @@ const Footer: () => JSX.Element = () => {
               />
             </Link>
           </div>
-          <div className="w-1/4 flex justify-end items-center gap-4  max-lg:flex-col max-lg:w-full max-lg:gap-2">
-            <p className="w-1/2 text-base leading-none font-normal max-lg:w-full ">
+          <div className="lg:w-1/4 flex justify-end items-center lg:gap-4 flex-col lg:flex-row w-full gap-2">
+            <p className="lg:w-1/2 text-base leading-none font-normal w-full ">
               Part of View Media Group (VMG)
             </p>
             <Link href="#">
@@ -103,7 +100,7 @@ const Footer: () => JSX.Element = () => {
             </Link>
           </div>
         </div>
-        <div className="flex max-lg:w-full max-lg:justify-center ">
+        <div className="flex w-full lg:w-auto justify-center lg:justify-normal">
           <p className="max-md:text-sm max-md:text-zinc-600 font-normal">
             Copyright © 2001-2023 | resi.uatz.view.com.au Ltd
           </p>

@@ -101,14 +101,14 @@ export const IMAGES: images[] = [
     alt: "app-store link",
     width: 180,
     height: 90,
-    className: "max-xs:w-140 max-xxs:w-120",
+    className: "xxs:w-140 w-120 xs:w-auto",
   },
   {
     src: playStore,
     alt: "play-store link",
     width: 190,
     height: 90,
-    className: "max-xs:w-150 max-xxs:w-130",
+    className: "xxs:w-150 w-130 xs:w-auto",
   },
   {
     src: FB,
@@ -150,7 +150,7 @@ export const IMAGES: images[] = [
     alt: "Mobile View",
     width: 320,
     height: 480,
-    className: "max-xs:w-350 max-xxs:w-300",
+    className: "xxs:w-350 w-300 xs:w-aut0",
   },
   {
     src: desktopView,

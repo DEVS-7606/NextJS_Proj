@@ -35,12 +35,12 @@ const DesktopPageView: () => JSX.Element = () => {
 
   return (
     <section
-      className="text-start flex flex-row-reverse px-16 py-10 items-center
-gap-4 max-lg:flex-col max-lg:px-0 max-lg:text-center"
+      className="text-center lg:text-start flex flex-col lg:flex-row-reverse lg:px-16 py-10 items-center
+gap-4 px-0 "
     >
       <div
-        className="w-1/2 flex px-20
-justify-start flex-col gap-4 max-lg:w-full max-lg:px-0 max-lg:gap-4"
+        className="lg:w-1/2 flex lg:px-20
+justify-start flex-col gap-4 w-full px-0"
       >
         <h2 className="font-bold text-2xl ">
           Search, plan and research properties.
@@ -49,11 +49,11 @@ justify-start flex-col gap-4 max-lg:w-full max-lg:px-0 max-lg:gap-4"
           Search any property in Australia, get price data and suburb
           information, plus points of interest.
         </p>
-        <div className="flex gap-4 my-4 max-lg:justify-center max-lg:mt-0 max-lg:px-8 max-xxs:px-4 items-center">
+        <div className="flex gap-4 my-4 justify-center lg:justify-normal mt-0 lg:mt-4 xxs:px-8 px-4 lg:px-0 items-center">
           {downloadAppLinkImages()}
         </div>
       </div>
-      <div className="w-1/2 flex justify-start max-lg:justify-start max-lg:w-full max-lg:px-4 max-sm:justify-center">
+      <div className="lg:w-1/2 flex w-full px-4 lg:px-0 justify-center sm:justify-start">
         {desktopImage()}
       </div>
     </section>

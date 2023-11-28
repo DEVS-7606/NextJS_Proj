@@ -63,7 +63,7 @@ const Header = (props: IProps): JSX.Element => {
       alt="Icon With Name"
       width={94}
       height={38}
-      className="relative cursor-pointer max-xl:relative max-xl:w-76"
+      className="relative cursor-pointer w-76 xl:w-auto"
     />
   );
 
@@ -72,7 +72,7 @@ const Header = (props: IProps): JSX.Element => {
       return (
         <li
           key={index}
-          className="px-3 flex  cursor-pointer transition hover:ease-inout hover:bg-gray-200 items-center hover:py-2 rounded-md duration-0"
+          className="px-3 flex cursor-pointer transition hover:ease-inout hover:bg-gray-200 items-center hover:py-2 rounded-md duration-0"
         >
           <Link
             href="#"
@@ -98,22 +98,22 @@ const Header = (props: IProps): JSX.Element => {
   return (
     <div className="bg-white sticky top-0 left-0 w-full flex justify-between items-center px-20 z-10 lg: max-xl:px-2 py-2">
       <div className="w-full max-w-1200 relative flex justify-between items-center xl:py-1 mx-auto text-base">
-        <div className="max-xl:flex max-xl:gap-4 max-xl:items-center">
+        <div className="flex xl:flex-none gap-4 xl:gap-0 items-center xl:items-start">
           <button onClick={props.toogleNavbar} className="xl:hidden">
             {hamBurgerSVG}
           </button>
           <Link href="/mobile">{viewLogoImage}</Link>
         </div>
-        <ul className="max-xl:hidden w-2/3 flex justify-center gap-x-2 font-medium items-center">
+        <ul className="hidden w-2/3 xl:flex justify-center gap-x-2 font-medium items-center">
           {viewServices()}
         </ul>
-        <button className="bg-seaBlue hover:bg-darkerSeaBlue leading-6 px-4 py-2.5 rounded-lg border-sky-700 max-xl:px-2 max-xl:py-1 ">
-          <span className="font-bold text-base text-white max-xl:text-sm">
+        <button className="bg-seaBlue hover:bg-darkerSeaBlue leading-6 xl:px-4 xl:py-2.5 rounded-lg border-sky-700 px-2 py-1 ">
+          <span className="font-bold xl:text-base text-white text-sm">
             Join / Sign In
           </span>
         </button>
       </div>
-      <hr className="absolute top-68 w-full right-0 max-xl:top-52" />
+      <hr className="absolute xl:top-68 w-full right-0 top-52" />
     </div>
   );
 };

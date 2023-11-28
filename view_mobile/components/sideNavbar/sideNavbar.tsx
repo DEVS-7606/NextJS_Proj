@@ -38,11 +38,13 @@ const SideNavbar = (props: { showSideNavbar: boolean }): JSX.Element => {
 
   return (
     <section
-      className={
-        props.showSideNavbar
-          ? "max-w-1200 mx-auto fixed left-0 top-4 w-[100%] h-screen bg-white py-10 transform overflow-y-auto translate-x-0 duration-200 no-scrollbar xl:left-[-100%]"
-          : "max-w-1200 mx-auto fixed left-[-100%] top-0 p-10 transform overflow-y-auto translate-x-0 duration-200"
-      }
+      className={`max-w-1200 mx-auto fixed transform overflow-y-auto translate-x-0 duration-200
+        ${
+          props.showSideNavbar
+            ? "left-0 top-4 w-[100%] h-screen bg-white py-10 no-scrollbar xl:left-[-100%]"
+            : "left-[-100%] top-0 p-10"
+        }
+     `}
     >
       <ul className="flex flex-col px-4 gap-6 pb-6 pt-2">
         {viewMainServices()}
