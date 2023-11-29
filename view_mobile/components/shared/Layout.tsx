@@ -4,15 +4,15 @@ import Footer from "../footer/footer";
 import SideNavbar from "../sideNavbar/sideNavbar";
 
 const Layout = (props: { children: any }) => {
-  const [showSideNavbar, setShowSideideNavbar] = useState(false);
+  const [showSideNavbar, setShowSideNavbar] = useState(false);
 
   const toggleNavbar = () => {
-    setShowSideideNavbar(!showSideNavbar);
+    setShowSideNavbar(!showSideNavbar);
   };
   return (
     <>
-      <Header toogleNavbar={toggleNavbar} toogleValue={showSideNavbar} />
-      <>{props.children}</>
+      <Header toggleNavbar={toggleNavbar} toggleValue={showSideNavbar} />
+      {props.children}
       <Footer />
       <SideNavbar showSideNavbar={showSideNavbar} />
     </>

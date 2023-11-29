@@ -3,7 +3,7 @@ import settleEasyImage from "@/public/images/settle-easy.svg";
 import Image from "next/image";
 
 const HeroSection = () => {
-  const settleEasy = () => {
+  const renderSettleEasy = () => {
     return (
       <Link href="#">
         <Image
@@ -16,20 +16,26 @@ const HeroSection = () => {
       </Link>
     );
   };
+
+  const renderPromotionalContent = () => {
+    return (
+      <div className="flex flex-col gap-6">
+        <h1 className="text-5xl lg:text-7xl leading-52 headLine font-bold break-words">
+          Buying or selling?
+        </h1>
+        <p className="md:text-base font-normal w-full text-sm">
+          Redeem your $220 conveyancing voucher and free contract review
+        </p>
+      </div>
+    );
+  };
   return (
     <section
       className="bg-saltWhite rounded-xl flex md:flex-row
     flex-col-reverse items-start p-6 gap-4 md:gap-0 text-almostBlack justify-between md:px-16 md:py-12 md:items-center text-start"
     >
-      <div className="flex flex-col gap-6">
-        <h1 className="text-5xl lg:text-7xl leading-52 headLine font-bold break-words">
-          Buying or selling?
-        </h1>
-        <h2 className="md:text-base font-normal w-full text-sm">
-          Redeem your $220 conveyancing voucher and free contract review
-        </h2>
-      </div>
-      {settleEasy()}
+      {renderPromotionalContent()}
+      {renderSettleEasy()}
     </section>
   );
 };

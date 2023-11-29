@@ -27,7 +27,7 @@ const Form = () => {
     /^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
   let phoneNumberValidationPattern: RegExp = /^[6-9]{1}[0-9]{9}$/;
 
-  const formFields = (): JSX.Element[] => {
+  const renderFormFields = (): JSX.Element[] => {
     return INPUTFIELDS.map((attributes, index) => {
       return (
         <Input
@@ -87,11 +87,104 @@ const Form = () => {
     return setUserInput(userDetails);
   };
 
-  const output = () => {
+  const renderOfferDescription = () => {
+    return (
+      <p className="font-bold">
+        Enter your details for your $220 conveyancing voucher and a free
+        contract review
+      </p>
+    );
+  };
+
+  const renderDropDown = (): JSX.Element => {
+    return (
+      <>
+        <label className="flex flex-col font-medium" htmlFor="state">
+          State *
+          <select
+            id="state"
+            name="state"
+            className={`bg-white fill-almostBlack border-2 rounded-lg outline-none focus-within:border-seaBlue py-3 text-base font-normal text-almostBlack ${
+              error && error.state ? `focus:outline-none border-errorRed ` : ``
+            }`}
+            defaultValue={"select your state"}
+          >
+            <option value="select your state" disabled>
+              Select your state
+            </option>
+            <option value="VIC">VIC</option>
+            <option value="NSW">NSW</option>
+            <option value="QLD">QLD</option>
+          </select>
+        </label>
+        {error && <p className="text-xs text-errorRed">{error.state}</p>}
+      </>
+    );
+  };
+
+  const renderCommentArea = (): JSX.Element => {
+    return (
+      <label className="flex flex-col font-medium" htmlFor="comment">
+        Comments or message
+        <textarea
+          className="bg-white fill-almostBlack border-2 rounded-lg outline-none focus-within:border-seaBlue pl-4 font-medium"
+          cols={20}
+          rows={4}
+          id="comment"
+          name="comment"
+        ></textarea>
+      </label>
+    );
+  };
+
+  const renderSubmitButton = (): JSX.Element => {
+    return (
+      <button
+        type="submit"
+        value=""
+        className="bg-seaBlue hover:bg-darkerSeaBlue fill-almostBlack border-2 rounded-lg leading-10 pl-4 text-white text-base flex text-center items-center justify-center gap-1 font-bold"
+      >
+        <i className="fa-solid fa-envelope"></i>
+        {"  "}
+        Redeem Offer
+      </button>
+    );
+  };
+
+  const renderPrivacyPolicyText = () => {
+    return (
+      <p className="text-center">
+        By submitting your details, you acknowledge that you accept our{" "}
+        <Link href="#" className="text-seaBlue">
+          Privacy Policy.
+        </Link>
+      </p>
+    );
+  };
+
+  const renderConveyancingForm = () => {
+    return (
+      <div className=" bg-white fill-almostBlack border-2 rounded-xl flex flex-col gap-6 p-6 text-sm text-start">
+        {renderOfferDescription()}
+        <form
+          className="flex flex-col text-start w-full gap-2 "
+          onSubmit={submit}
+        >
+          {renderFormFields()}
+          {renderDropDown()}
+          {renderCommentArea()}
+          {renderSubmitButton()}
+        </form>
+        {renderPrivacyPolicyText()}
+      </div>
+    );
+  };
+
+  const renderOutput = () => {
     const dataOutput = Object.entries(userInput);
 
     return (
-      <div className="border-2 rounded-xl fill-almostBlack bg-white">
+      <div className="border-2 p-2 rounded-xl fill-almostBlack bg-white">
         {dataOutput.map(([key, value]) => (
           <p key={key}>
             {key}:{value}
@@ -101,78 +194,10 @@ const Form = () => {
     );
   };
 
-  const select: JSX.Element = (
-    <>
-      <label className="flex flex-col font-medium" htmlFor="state">
-        State *
-        <select
-          id="state"
-          name="state"
-          className={`bg-white fill-almostBlack border-2 rounded-lg outline-none focus-within:border-seaBlue py-3 text-base font-normal text-almostBlack ${
-            error && error.state ? `focus:outline-none border-errorRed ` : ``
-          }`}
-          defaultValue={"select your state"}
-        >
-          <option value="select your state" disabled>
-            Select your state
-          </option>
-          <option value="VIC">VIC</option>
-          <option value="NSW">NSW</option>
-          <option value="QLD">QLD</option>
-        </select>
-      </label>
-      {error && <p className="text-xs text-errorRed">{error.state}</p>}
-    </>
-  );
-
-  const commentSection: JSX.Element = (
-    <label className="flex flex-col font-medium" htmlFor="comment">
-      Comments or message
-      <textarea
-        className="bg-white fill-almostBlack border-2 rounded-lg outline-none focus-within:border-seaBlue pl-4 font-medium"
-        cols={20}
-        rows={4}
-        id="comment"
-        name="comment"
-      ></textarea>
-    </label>
-  );
-
-  const submitButton: JSX.Element = (
-    <button
-      type="submit"
-      value=""
-      className="bg-seaBlue hover:bg-darkerSeaBlue fill-almostBlack border-2 rounded-lg leading-10 pl-4 text-white text-base flex text-center items-center justify-center gap-1 font-bold"
-    >
-      <i className="fa-solid fa-envelope"></i>
-      {"  "}
-      Redeem Offer
-    </button>
-  );
   return (
     <div className="w-2/5 flex flex-col gap-4 max-lg:w-full">
-      <div className=" bg-white fill-almostBlack border-2 rounded-xl flex flex-col gap-6 p-6 text-sm text-start">
-        <p className="font-bold">
-          Enter your details for your $220 conveyancing voucher and a free
-          contract review
-        </p>
-        <form
-          className="flex flex-col text-start w-full gap-2 "
-          onSubmit={submit}
-        >
-          {formFields()}
-          {select}
-          {commentSection}
-          {submitButton}
-        </form>
-        <p className="text-center">
-          By submitting your details, you acknowledge that you accept our{" "}
-          <Link href="#" className="text-seaBlue">
-            Privacy Policy.
-          </Link>
-        </p>
-      </div>
-      {output()}
+      {renderConveyancingForm()}
+      {renderOutput()}
     </div>
   );
 };

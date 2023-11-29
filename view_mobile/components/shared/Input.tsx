@@ -1,10 +1,12 @@
-const Input = (props: {
+interface Iprops {
   title: string;
   name: string;
   type: string;
   error?: Record<string, string>;
   id: number;
-}): JSX.Element => {
+}
+
+const Input = (props: Iprops): JSX.Element => {
   return (
     <>
       <label className="flex flex-col font-medium" htmlFor={props.name}>

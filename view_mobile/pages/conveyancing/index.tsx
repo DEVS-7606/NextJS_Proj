@@ -3,11 +3,9 @@ import Layout from "@/components/shared/Layout";
 
 const Conveyancing = () => {
   return (
-    <>
-      <Layout>
-        <Main />
-      </Layout>
-    </>
+    <Layout>
+      <Main />
+    </Layout>
   );
 };
 

@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <title>Property App for iOS & Android </title>
+        <title>Property App for iOS & Android</title>
       </Head>
       <Component {...pageProps} />
     </>

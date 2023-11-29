@@ -3,6 +3,7 @@ import FAQ from "@/components/conveyancing/faq";
 import HeroSection from "@/components/conveyancing/hero";
 import VoucherDetails from "@/components/conveyancing/voucherDetails";
 import { FREQ_ASKED_QUES, REVIEWS } from "@/data";
+import Container from "../shared/container";
 
 const Main = (): JSX.Element => {
   const renderFaq = () => {
@@ -15,7 +16,7 @@ const Main = (): JSX.Element => {
         </section>
         <section className="text-almostBlack">
           {FREQ_ASKED_QUES.map((data, index) => {
-            return <FAQ ques={data.ques} ans={data.ans} index={index} />;
+            return <FAQ question={data.ques} answer={data.ans} index={index} />;
           })}
         </section>
       </div>
@@ -45,13 +46,16 @@ const Main = (): JSX.Element => {
       </div>
     );
   };
+
   return (
-    <div className="flex max-w-1200 mx-auto flex-col xl:py-8 p-4 xl:px-0 gap-8">
-      <HeroSection />
-      <VoucherDetails />
-      {renderFaq()}
-      {renderReviews()}
-    </div>
+    <Container>
+      <div className="flex flex-col xl:py-8 p-4 xl:px-0 gap-8">
+        <HeroSection />
+        <VoucherDetails />
+        {renderFaq()}
+        {renderReviews()}
+      </div>
+    </Container>
   );
 };
 

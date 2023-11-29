@@ -1,6 +1,6 @@
 import rocket from "@/public/images/nav-rocket.svg";
 import scale from "@/public/images/nav-scales.svg";
-import aution from "@/public/images/nav-auction.svg";
+import auction from "@/public/images/nav-auction.svg";
 import coins from "@/public/images/nav-coins-hand.svg";
 import file from "@/public/images/nav-file.svg";
 import info from "@/public/images/nav-info-circle.svg";
@@ -52,7 +52,7 @@ export const OTHERSERVICES: OtherServices[] = [
   { name: "New Developments", image: { src: rocket, alt: "rocket" } },
   { name: "Price Estimate", image: { src: scale, alt: "scales" } },
   { name: "Find Agents", image: { src: users, alt: "users" } },
-  { name: "Auction Results", image: { src: aution, alt: "aution" } },
+  { name: "Auction Results", image: { src: auction, alt: "auction" } },
   { name: "Location Profiles", image: { src: pin, alt: "pin" } },
   { name: "Advice", image: { src: bulb, alt: "bulb" } },
   { name: "News", image: { src: file, alt: "News" } },

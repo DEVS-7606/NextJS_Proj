@@ -20,23 +20,29 @@ const CustomerReview = (props: Iprops): JSX.Element => {
     setHeight(!showFullReview ? reviewRef.current.scrollHeight : "96px");
   };
 
-  const star = () => {
-    return Array(5).fill(
-      <Image src={StarImage} alt="star" height={20} width={20} />
+  const renderStar = () => {
+    return (
+      <div className="flex">
+        {Array(5).fill(
+          <Image src={StarImage} alt="star" height={20} width={20} />
+        )}
+      </div>
     );
   };
 
-  return (
-    <div
-      className="bg-white border shadow-sm rounded-xl gap-2 h-fit p-4 flex flex-col text-start"
-      key={props.index}
-    >
+  const renderRatings = () => {
+    return (
       <div className="flex justify-between">
-        <div className="flex gap-1 justify-center items-center">{star()}</div>
+        {renderStar()}
         <div className="text-xs font-normal text-almostBlack">
           {props.periodOfTime}
         </div>
       </div>
+    );
+  };
+
+  const renderReview = () => {
+    return (
       <div
         className={`overflow-hidden transition-all duration-500`}
         ref={reviewRef}
@@ -44,6 +50,11 @@ const CustomerReview = (props: Iprops): JSX.Element => {
       >
         {props.review}
       </div>
+    );
+  };
+
+  const renderShowMoreAndLessBtn = () => {
+    return (
       <div
         className="flex items-center gap-1 text-seaBlue mt-2 cursor-pointer"
         onClick={() => fullReviewButton()}
@@ -57,7 +68,22 @@ const CustomerReview = (props: Iprops): JSX.Element => {
           }`}
         />
       </div>
-      <div className="text-sm font-bold mt-4">{props.reviewer}</div>
+    );
+  };
+
+  const renderReviewerName = () => {
+    return <div className="text-sm font-bold mt-4">{props.reviewer}</div>;
+  };
+
+  return (
+    <div
+      className="bg-white border shadow-sm rounded-xl gap-2 h-fit p-4 flex flex-col text-start"
+      key={props.index}
+    >
+      {renderRatings()}
+      {renderReview()}
+      {renderShowMoreAndLessBtn()}
+      {renderReviewerName()}
     </div>
   );
 };
