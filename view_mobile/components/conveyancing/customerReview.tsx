@@ -15,7 +15,7 @@ const CustomerReview = (props: Iprops): JSX.Element => {
   const [height, setHeight] = useState<string>("96px");
   const reviewRef: any = useRef(null);
 
-  const fullReviewButton = (): void => {
+  const renderShowFullReviewBtn = (): void => {
     setShowFullReview(!showFullReview);
     setHeight(!showFullReview ? reviewRef.current.scrollHeight : "96px");
   };
@@ -57,7 +57,7 @@ const CustomerReview = (props: Iprops): JSX.Element => {
     return (
       <div
         className="flex items-center gap-1 text-seaBlue mt-2 cursor-pointer"
-        onClick={() => fullReviewButton()}
+        onClick={() => renderShowFullReviewBtn()}
       >
         Show {showFullReview ? "less" : "more"}
         <Image

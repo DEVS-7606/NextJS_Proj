@@ -5,7 +5,7 @@ import Link from "next/link";
 const MobilePageView: () => JSX.Element = () => {
   const renderAppsImage = (): JSX.Element => {
     return (
-      <div className="flex gap-4 my-8 lg:px-0 xxs:px-8 px-4 justify-center lg:justify-normal mt-0 lg:mt-auto items-center">
+      <div className="flex gap-4 my-8 justify-center lg:justify-normal mt-0 lg:px-0 items-center xxs:px-8 px-4 lg:mt-auto">
         {IMAGES.slice(0, 2).map((image) => {
           return (
             <Link href="#">
@@ -17,6 +17,24 @@ const MobilePageView: () => JSX.Element = () => {
                 className={image.className}
               />
             </Link>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const getMobileImage = (): JSX.Element => {
+    return (
+      <div className="w-full lg:w-1/2 flex justify-center lg:px-0 px-20  sm:justify-end">
+        {IMAGES.slice(7, 8).map((image) => {
+          return (
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              className={image.className}
+            />
           );
         })}
       </div>
@@ -38,26 +56,8 @@ const MobilePageView: () => JSX.Element = () => {
     );
   };
 
-  const getMobileImage = (): JSX.Element => {
-    return (
-      <div className="flex lg:justify-end sm:justify-start justify-center w-full lg:w-1/2 px-20 lg:px-0">
-        {IMAGES.slice(7, 8).map((image) => {
-          return (
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
-              className={image.className}
-            />
-          );
-        })}
-      </div>
-    );
-  };
-
   return (
-    <section className="text-center lg:text-start flex px-0 lg:px-16 py-24 items-center flex-col lg:flex-row gap-2 lg:gap-0 pt-16 lg:pt-24 xs:pb-10 pb-16 ">
+    <section className="text-almostBlack text-center lg:text-start flex flex-col px-0 lg:px-16 items-center gap-2 lg:gap-0 lg:flex-row py-16 lg:py-24">
       {renderFeaturesDescAndAppsImg()}
       {getMobileImage()}
     </section>

@@ -20,6 +20,48 @@ import desktopView from "@/public/images/landing-page-desktop.jpg";
 import settleEasy from "@/public/images/settle-easy.svg";
 import star from "@/public/images/star.svg";
 
+export interface responsiveDisplay {
+  heading: string;
+  description: string;
+  mainClassName: string;
+  renderAppsImageClassName: string;
+  getImageClassName: string;
+  renderSpecsAndAppsImgClassName: string;
+  AppIndexStart: number;
+  AppIndexEnd: number;
+  DisplayImageStartIndex: number;
+  DisplayImageEndIndex: number;
+}
+
+export const RESPONSIVE_DISPLAY_PROPS: responsiveDisplay[] = [
+  {
+    heading: "Save and track.",
+    description:
+      "Shortlist your favorite properties to keep track of upcoming open for inspections and auction. Login with your resi.uatz.view.com.au account to sync your saved properties between your computer and mobile devices.",
+    mainClassName: " gap-2 lg:gap-0 lg:flex-row py-16 lg:py-24",
+    renderAppsImageClassName: "lg:mt-auto",
+    getImageClassName: "px-20 sm:justify-end",
+    renderSpecsAndAppsImgClassName: "",
+    AppIndexStart: 0,
+    AppIndexEnd: 2,
+    DisplayImageStartIndex: 7,
+    DisplayImageEndIndex: 8,
+  },
+  {
+    heading: "Search, plan and research properties.",
+    description:
+      "Search any property in Australia, get price data and suburb information, plus points of interest.",
+    mainClassName: "gap-4 lg:flex-row-reverse py-4 lg:py-10",
+    renderAppsImageClassName: "lg:mt-4",
+    getImageClassName: "px-4 sm:justify-start",
+    renderSpecsAndAppsImgClassName: "lg:px-20 justify-start px-0",
+    AppIndexStart: 0,
+    AppIndexEnd: 2,
+    DisplayImageStartIndex: 8,
+    DisplayImageEndIndex: 9,
+  },
+];
+
 export interface Services {
   name: string;
   isHavingImage: boolean;

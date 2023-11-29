@@ -5,7 +5,7 @@ import Link from "next/link";
 const DesktopPageView: () => JSX.Element = () => {
   const renderAppsImage = (): JSX.Element => {
     return (
-      <div className="flex gap-4 my-4 justify-center lg:justify-normal mt-0 lg:mt-4 xxs:px-8 px-4 lg:px-0 items-center">
+      <div className="flex gap-4 my-4 justify-center lg:justify-normal mt-0 lg:px-0 items-center xxs:px-8 px-4 lg:mt-4">
         {IMAGES.slice(0, 2).map((image) => {
           return (
             <Link href="#">
@@ -25,7 +25,7 @@ const DesktopPageView: () => JSX.Element = () => {
 
   const getDesktopImage = (): JSX.Element => {
     return (
-      <div className="lg:w-1/2 flex w-full px-4 lg:px-0 justify-center sm:justify-start">
+      <div className="w-full lg:w-1/2 flex justify-center lg:px-0 px-4 sm:justify-start">
         {IMAGES.slice(8, 9).map((image) => {
           return (
             <Image
@@ -44,8 +44,8 @@ const DesktopPageView: () => JSX.Element = () => {
   const renderFeaturesDescAndAppsImg = () => {
     return (
       <div
-        className="lg:w-1/2 flex lg:px-20
-justify-start flex-col gap-4 w-full px-0"
+        className="w-full lg:w-1/2 flex flex-col gap-4 lg:px-20
+justify-start px-0"
       >
         <h2 className="font-bold text-2xl ">
           Search, plan and research properties.
@@ -60,10 +60,7 @@ justify-start flex-col gap-4 w-full px-0"
   };
 
   return (
-    <section
-      className="text-almostBlack text-center lg:text-start flex flex-col lg:flex-row-reverse lg:px-16 py-10 items-center
-gap-4 px-0 "
-    >
+    <section className="text-almostBlack text-center lg:text-start flex flex-col px-0 lg:px-16 items-center gap-4 lg:flex-row-reverse py-4 lg:py-10">
       {renderFeaturesDescAndAppsImg()}
       {getDesktopImage()}
     </section>

@@ -123,7 +123,7 @@ const Header = (props: IProps): JSX.Element => {
     <div className="bg-white sticky top-0 w-screen z-10 py-2 border-b">
       {/* for setting border of header you have to build the container component which contain max-w-1200 and mx-auto so it doesn't overlap */}
       <Container>
-        <div className="relative flex justify-between items-center xl:py-1 mx-auto text-base">
+        <div className="relative flex justify-between items-center xl:py-1 mx-3 text-base">
           <div className="flex xl:flex-none gap-4 xl:gap-0 items-center xl:items-start">
             {renderHamBurger()}
             {getViewLogo()}
