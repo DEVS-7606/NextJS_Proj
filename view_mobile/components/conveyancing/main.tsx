@@ -27,9 +27,9 @@ const Main = (): JSX.Element => {
     return (
       <div className="mx-auto rounded-xl mb-14 bg-shirtBlue">
         <div className="flex items-center">
-          <h1 className="text-base tracking-wider font-bold mx-4 mt-6 mb-4 lg:mx-auto lg:text-2xl lg:mt-10 lg:mb-6">
+          <h2 className="text-base tracking-wider font-bold mx-4 mt-6 mb-4 lg:mx-auto lg:text-2xl lg:mt-10 lg:mb-6">
             What Settle Easy customers are saying...
-          </h1>
+          </h2>
         </div>
         <div className="px-4 pb-6 lg-px-10 lg:pb-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
           {REVIEWS.map((review, index) => {
