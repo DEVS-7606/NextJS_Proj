@@ -1,13 +1,14 @@
 import HeroSection from "./hero";
-import Container from "../shared/container";
+import Container from "@/shared/components/pageContainer/pageContainer";
 import ResponsiveDisplayView from "./responsiveDisplayView";
-import { RESPONSIVE_DISPLAY_PROPS } from "@/data";
+import { RESPONSIVE_DISPLAY_PROPS } from "../../../../data";
 
 const Main: () => JSX.Element = () => {
   const renderDifferentDisplayOfWebSite = () => {
-    return RESPONSIVE_DISPLAY_PROPS.map((displayType) => {
+    return RESPONSIVE_DISPLAY_PROPS.map((displayType, index) => {
       return (
         <ResponsiveDisplayView
+          key={index}
           heading={displayType.heading}
           description={displayType.description}
           mainClassName={displayType.mainClassName}
