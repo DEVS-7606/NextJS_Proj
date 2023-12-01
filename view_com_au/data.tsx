@@ -132,7 +132,7 @@ export interface images {
   alt: string;
   width: number;
   height: number;
-  className: string;
+  className?: string;
 }
 
 export const IMAGES: images[] = [
@@ -141,14 +141,12 @@ export const IMAGES: images[] = [
     alt: "app-store link",
     width: 180,
     height: 90,
-    className: "xxs:w-140 w-120 xs:w-auto",
   },
   {
     src: playStore,
     alt: "play-store link",
     width: 190,
     height: 90,
-    className: "xxs:w-150 w-130 xs:w-auto",
   },
   {
     src: FB,

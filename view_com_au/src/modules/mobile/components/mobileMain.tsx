@@ -1,9 +1,9 @@
-import HeroSection from "./hero";
+import ExploreProperties from "./explorePropertiesBanner";
 import Container from "@/shared/components/pageContainer/pageContainer";
 import ResponsiveDisplayView from "./responsiveDisplayView";
 import { RESPONSIVE_DISPLAY_PROPS } from "../../../../data";
 
-const Main: () => JSX.Element = () => {
+const MobileMain: () => JSX.Element = () => {
   const renderDifferentDisplayOfWebSite = () => {
     return RESPONSIVE_DISPLAY_PROPS.map((displayType, index) => {
       return (
@@ -29,11 +29,11 @@ const Main: () => JSX.Element = () => {
   return (
     <Container>
       <div className="flex flex-col py-4 pb-8 px-4 lg:pb-20 xl:px-0 xl:py-8">
-        <HeroSection />
+        <ExploreProperties />
         {renderDifferentDisplayOfWebSite()}
       </div>
     </Container>
   );
 };
 
-export default Main;
+export default MobileMain;

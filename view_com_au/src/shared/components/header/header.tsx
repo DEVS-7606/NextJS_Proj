@@ -2,6 +2,7 @@
 import { SERVICES } from "../../../../data";
 import Image from "next/image";
 import Container from "@/shared/components/pageContainer/pageContainer";
+import Button from "../button/button";
 
 interface IProps {
   toggleNavbar: () => void;
@@ -11,7 +12,10 @@ interface IProps {
 const Header = (props: IProps): JSX.Element => {
   const renderHamBurger = (): JSX.Element => {
     return (
-      <button onClick={props.toggleNavbar} className="xl:hidden">
+      <button
+        onClick={props.toggleNavbar}
+        className="1200px:hidden flex items-start"
+      >
         <svg
           className="hb"
           xmlns="http://www.w3.org/2000/svg"
@@ -69,13 +73,13 @@ const Header = (props: IProps): JSX.Element => {
   };
   const getViewLogo = (): JSX.Element => {
     return (
-      <a href="/mobile">
+      <a href="#">
         <Image
           src="/images/viewLogo.svg"
           alt="Icon With Name"
-          width={94}
+          width={76}
           height={38}
-          className="relative cursor-pointer w-76 xl:w-auto"
+          className="relative cursor-pointer w-44 md:w-94 xl:w-auto flex items-center"
         />
       </a>
     );
@@ -106,23 +110,19 @@ const Header = (props: IProps): JSX.Element => {
 
   const renderJoinAndSignIn = () => {
     return (
-      <button className="bg-seaBlue hover:bg-darkerSeaBlue leading-6 xl:px-4 xl:py-2.5 rounded-lg border-sky-700 px-2 py-1 ">
-        <span className="font-bold xl:text-base text-white text-sm">
-          Join / Sign In
-        </span>
-      </button>
+      <Button title="Join / Sign In" className="px-4 py-2 md:px-3 md:py-2.5" />
     );
   };
 
   return (
-    <div className="bg-white sticky top-0 w-screen z-10 py-2 border-b">
+    <div className="bg-white sticky top-0 w-screen z-20 py-2 border-b">
       <Container>
-        <div className="relative flex flex-row justify-between items-center xl:py-1 mx-3 text-base">
-          <div className="flex xl:flex-none gap-4 xl:gap-0 items-center xl:items-start">
+        <div className="relative flex flex-row justify-between items-center xl:py-1 text-base">
+          <div className="flex xl:flex-none gap-4 xl:items-start">
             {renderHamBurger()}
             {getViewLogo()}
           </div>
-          <ul className="hidden w-2/3 xl:flex justify-center gap-x-2 font-medium items-center">
+          <ul className="hidden w-2/3 1200px:flex justify-center gap-x-2 font-medium items-center">
             {getViewServices()}
           </ul>
           {renderJoinAndSignIn()}

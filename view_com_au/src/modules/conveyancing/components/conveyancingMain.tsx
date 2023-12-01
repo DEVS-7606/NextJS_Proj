@@ -1,11 +1,11 @@
 import CustomerReview from "./customerReview";
 import FAQ from "@/modules/conveyancing/components/faq";
-import HeroSection from "@/modules/conveyancing/components/hero";
 import VoucherDetails from "@/modules/conveyancing/components/voucherDetails";
 import { FREQ_ASKED_QUES, REVIEWS } from "../../../../data";
 import Container from "@/shared/components/pageContainer/pageContainer";
+import BuyAndSellBanner from "./buyAndSellBanner";
 
-const Main = (): JSX.Element => {
+const ConveyancingMain = (): JSX.Element => {
   const renderFaq = () => {
     return (
       <div className="lg:w-3/5 w-full mb-4">
@@ -58,7 +58,7 @@ const Main = (): JSX.Element => {
   return (
     <Container>
       <div className="flex flex-col xl:py-8 p-4 xl:px-0 gap-8">
-        <HeroSection />
+        <BuyAndSellBanner />
         <VoucherDetails />
         {renderFaq()}
         {renderReviews()}
@@ -67,4 +67,4 @@ const Main = (): JSX.Element => {
   );
 };
 
-export default Main;
+export default ConveyancingMain;

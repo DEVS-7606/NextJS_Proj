@@ -1,10 +1,10 @@
-import Main from "@/modules/mobile/components/main";
+import MobileMain from "@/modules/mobile/components/mobileMain";
 import Layout from "@/shared/components/Layout/Layout";
 
 const MobileView = (): JSX.Element => {
   return (
     <Layout>
-      <Main />
+      <MobileMain />
     </Layout>
   );
 };

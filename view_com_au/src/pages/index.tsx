@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const Home = (): JSX.Element => {
   useEffect(() => {
-    window.location.assign("/conveyancing");
+    window.location.assign("/new-developments");
   }, []);
 
   return <p>Loading...</p>;

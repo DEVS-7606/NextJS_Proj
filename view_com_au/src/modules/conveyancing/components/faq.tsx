@@ -1,3 +1,4 @@
+import ToggleButton from "@/shared/components/toggleMoreOrLessBtn/toggleMoreOrLessBtn";
 import { useState, useRef } from "react";
 
 interface IProps {
@@ -8,12 +9,15 @@ interface IProps {
 
 const FAQ = (props: IProps): JSX.Element => {
   const [showAnswer, setShowAnswer] = useState<boolean>(false);
-  const [height, setHeight] = useState<string>("0px");
-  const answerRef: any = useRef(null);
+  const heightRef = useRef<string>("0px");
+  const answerRef = useRef<any>(null);
 
   const toggleAnswer = (): void => {
     setShowAnswer(!showAnswer);
-    setHeight(!showAnswer ? answerRef.current.scrollHeight : "0px");
+    if (!showAnswer) {
+      return (heightRef.current = answerRef.current?.scrollHeight);
+    }
+    heightRef.current = "0px";
   };
 
   const renderQuesAndToggleBtn = () => {
@@ -36,7 +40,7 @@ const FAQ = (props: IProps): JSX.Element => {
     return (
       <div
         ref={answerRef}
-        style={{ height: height }}
+        style={{ height: heightRef.current }}
         className={`text-sm font-normal transition-all duration-500 overflow-hidden flex flex-col gap-3 ${
           showAnswer ? "mb-4" : "mb-0"
         }`}
@@ -48,8 +52,22 @@ const FAQ = (props: IProps): JSX.Element => {
 
   return (
     <div className={"border-b"} key={props.index}>
-      {renderQuesAndToggleBtn()}
-      {renderAnswer()}
+      {/* {renderQuesAndToggleBtn()}
+      {renderAnswer()} */}
+      <ToggleButton
+        mainClassName="flex flex-col-reverse"
+        initialHeight="0px"
+        className="justify-between py-sm flex-row-reverse"
+        ShowLess="-"
+        ShowMore="+"
+        valueClassName="text-sm font-normal flex flex-col gap-3 mb-4"
+        value={props.answer}
+        toggleClassName="text-2xl font-medium pb-1"
+      >
+        <h3 className="text-base font-bold pr-2 tracking-wide">
+          {props.question}
+        </h3>
+      </ToggleButton>
     </div>
   );
 };

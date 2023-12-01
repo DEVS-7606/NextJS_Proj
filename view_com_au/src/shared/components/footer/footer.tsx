@@ -138,7 +138,7 @@ const Footer: () => JSX.Element = () => {
 
   return (
     <Container>
-      <footer className="text-lightGray flex flex-col gap-8 text-base py-0 text-center lg:text-start px-4 lg:px-0">
+      <footer className="text-lightGray flex flex-col gap-8 text-base py-2 text-center lg:text-start px-4 lg:px-0">
         {renderSocialMediaAndServices()}
 
         <hr className="w-full" />
