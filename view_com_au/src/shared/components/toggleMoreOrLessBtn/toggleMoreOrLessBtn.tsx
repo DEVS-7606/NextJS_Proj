@@ -38,7 +38,7 @@ interface Iprops {
     | ReactPortal
     | null
     | undefined;
-  valueClassName: string;
+  valueClassName?: string;
   value:
     | string
     | number
@@ -49,6 +49,9 @@ interface Iprops {
     | null
     | undefined;
   toggleClassName?: string;
+  propsChildClass?: string;
+  propsChildClassIfTrue?: string;
+  propsChildClassIfFalse?: string;
 }
 
 const ToggleButton = (props: Iprops) => {
@@ -67,20 +70,26 @@ const ToggleButton = (props: Iprops) => {
   const renderToggleBtn = () => {
     return (
       <div
-        className={`flex items-center cursor-pointer ${props.className}`}
+        className={`flex justify-start items-center cursor-pointer ${props.className}`}
         onClick={() => toggle()}
       >
         <span className={`${props.toggleClassName}`}>
           {show ? props.ShowLess : props.ShowMore}
         </span>
-        {props.children}
+        <span
+          className={`${props.propsChildClass} ${
+            show ? props.propsChildClassIfFalse : props.propsChildClassIfTrue
+          }`}
+        >
+          {props.children}
+        </span>
       </div>
     );
   };
   const renderValue = () => {
     return (
       <div
-        className={`overflow-hidden transition-all duration-50 ${props.valueClassName}`} /* ${show? props.trueValueClass:falseValueClass} */
+        className={`overflow-hidden transition-all duration-500 ${props.valueClassName}`} /* ${show? props.trueValueClass:falseValueClass} */
         ref={customRef}
         style={{ height: heightRef.current }}
       >

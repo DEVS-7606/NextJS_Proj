@@ -137,19 +137,17 @@
             "useFloorPlan": 0,
             "isHidden": 0,
             "files": {
-              "thumbnail": [
-                {
-                  "id": "322f1b22-8f35-42e1-9d37-c723b7625ef5",
-                  "type": "thumbnail",
-                  "location": "grand-reve/file/thumbnail/hero1__original.jpg",
-                  "name": "hero1__original.jpg",
-                  "textAlternative": null,
-                  "size": 450402,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/hero1__original.jpg",
-                  "createdAt": "2021-03-03 15:48:05",
-                  "updatedAt": "2021-03-03 15:48:05"
-                }
-              ]
+              "thumbnail": {
+                "id": "322f1b22-8f35-42e1-9d37-c723b7625ef5",
+                "type": "thumbnail",
+                "location": "grand-reve/file/thumbnail/hero1__original.jpg",
+                "name": "hero1__original.jpg",
+                "textAlternative": null,
+                "size": 450402,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/hero1__original.jpg",
+                "createdAt": "2021-03-03 15:48:05",
+                "updatedAt": "2021-03-03 15:48:05"
+              }
             },
             "studyroom": "",
             "private_pool": "",
@@ -178,19 +176,17 @@
             "useFloorPlan": 0,
             "isHidden": 0,
             "files": {
-              "thumbnail": [
-                {
-                  "id": "e88b114f-dbb8-421e-8b3b-4baac280df56",
-                  "type": "thumbnail",
-                  "location": "grand-reve/file/thumbnail/groundlevel_bbqarea__original.jpg",
-                  "name": "groundlevel_bbqarea__original.jpg",
-                  "textAlternative": null,
-                  "size": 474339,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/groundlevel_bbqarea__original.jpg",
-                  "createdAt": "2021-03-03 15:48:55",
-                  "updatedAt": "2021-03-03 15:48:55"
-                }
-              ]
+              "thumbnail": {
+                "id": "e88b114f-dbb8-421e-8b3b-4baac280df56",
+                "type": "thumbnail",
+                "location": "grand-reve/file/thumbnail/groundlevel_bbqarea__original.jpg",
+                "name": "groundlevel_bbqarea__original.jpg",
+                "textAlternative": null,
+                "size": 474339,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/groundlevel_bbqarea__original.jpg",
+                "createdAt": "2021-03-03 15:48:55",
+                "updatedAt": "2021-03-03 15:48:55"
+              }
             },
             "studyroom": "",
             "private_pool": "",
@@ -219,19 +215,17 @@
             "useFloorPlan": 0,
             "isHidden": 0,
             "files": {
-              "thumbnail": [
-                {
-                  "id": "7aab1e20-5bc9-4075-a498-4178a132e688",
-                  "type": "thumbnail",
-                  "location": "grand-reve/file/thumbnail/kitchen__original.jpg",
-                  "name": "kitchen__original.jpg",
-                  "textAlternative": null,
-                  "size": 136195,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/kitchen__original.jpg",
-                  "createdAt": "2021-03-03 15:50:36",
-                  "updatedAt": "2021-03-03 15:50:36"
-                }
-              ]
+              "thumbnail": {
+                "id": "7aab1e20-5bc9-4075-a498-4178a132e688",
+                "type": "thumbnail",
+                "location": "grand-reve/file/thumbnail/kitchen__original.jpg",
+                "name": "kitchen__original.jpg",
+                "textAlternative": null,
+                "size": 136195,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/kitchen__original.jpg",
+                "createdAt": "2021-03-03 15:50:36",
+                "updatedAt": "2021-03-03 15:50:36"
+              }
             },
             "studyroom": "",
             "private_pool": "",
@@ -260,19 +254,17 @@
             "useFloorPlan": 0,
             "isHidden": 0,
             "files": {
-              "thumbnail": [
-                {
-                  "id": "b231c406-3b9b-40b1-a8d5-fe24ec7729a6",
-                  "type": "thumbnail",
-                  "location": "grand-reve/file/thumbnail/lounge__original.jpg",
-                  "name": "lounge__original.jpg",
-                  "textAlternative": null,
-                  "size": 182124,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/lounge__original.jpg",
-                  "createdAt": "2021-03-03 15:49:52",
-                  "updatedAt": "2021-03-03 15:49:52"
-                }
-              ]
+              "thumbnail": {
+                "id": "b231c406-3b9b-40b1-a8d5-fe24ec7729a6",
+                "type": "thumbnail",
+                "location": "grand-reve/file/thumbnail/lounge__original.jpg",
+                "name": "lounge__original.jpg",
+                "textAlternative": null,
+                "size": 182124,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/lounge__original.jpg",
+                "createdAt": "2021-03-03 15:49:52",
+                "updatedAt": "2021-03-03 15:49:52"
+              }
             },
             "studyroom": "",
             "private_pool": "",
@@ -301,19 +293,17 @@
             "useFloorPlan": 0,
             "isHidden": 0,
             "files": {
-              "thumbnail": [
-                {
-                  "id": "6a3edd63-9174-4a68-b6f0-d4b5ea2d1cf5",
-                  "type": "thumbnail",
-                  "location": "grand-reve/file/thumbnail/external_graden__original.jpg",
-                  "name": "external_graden__original.jpg",
-                  "textAlternative": null,
-                  "size": 434277,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/external_graden__original.jpg",
-                  "createdAt": "2021-03-03 15:51:07",
-                  "updatedAt": "2021-03-03 15:51:07"
-                }
-              ]
+              "thumbnail": {
+                "id": "6a3edd63-9174-4a68-b6f0-d4b5ea2d1cf5",
+                "type": "thumbnail",
+                "location": "grand-reve/file/thumbnail/external_graden__original.jpg",
+                "name": "external_graden__original.jpg",
+                "textAlternative": null,
+                "size": 434277,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/external_graden__original.jpg",
+                "createdAt": "2021-03-03 15:51:07",
+                "updatedAt": "2021-03-03 15:51:07"
+              }
             },
             "studyroom": "",
             "private_pool": "",
@@ -342,19 +332,17 @@
             "useFloorPlan": 0,
             "isHidden": 0,
             "files": {
-              "thumbnail": [
-                {
-                  "id": "bd71be59-5ecf-46e9-8ff4-955dafb26089",
-                  "type": "thumbnail",
-                  "location": "grand-reve/file/thumbnail/hero1__original-1-.jpg",
-                  "name": "hero1__original (1).jpg",
-                  "textAlternative": null,
-                  "size": 450402,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/hero1__original-1-.jpg",
-                  "createdAt": "2021-03-03 15:52:07",
-                  "updatedAt": "2021-03-03 15:52:07"
-                }
-              ]
+              "thumbnail": {
+                "id": "bd71be59-5ecf-46e9-8ff4-955dafb26089",
+                "type": "thumbnail",
+                "location": "grand-reve/file/thumbnail/hero1__original-1-.jpg",
+                "name": "hero1__original (1).jpg",
+                "textAlternative": null,
+                "size": 450402,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/hero1__original-1-.jpg",
+                "createdAt": "2021-03-03 15:52:07",
+                "updatedAt": "2021-03-03 15:52:07"
+              }
             },
             "studyroom": "",
             "private_pool": "",
@@ -387,32 +375,28 @@
               "updatedAt": "2021-03-02 12:01:00"
             }
           ],
-          "video": [
-            {
-              "id": "1e0b527b-076f-4237-ab04-ca487b124e25",
-              "type": "video",
-              "location": "grand-reve/file/video/grand_reve-gallery-04__1200x550.png",
-              "name": "grand_reve-gallery-04__1200x550.png",
-              "textAlternative": "FF08ohAgQl4",
-              "size": 1369565,
-              "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/video/grand_reve-gallery-04__1200x550.png",
-              "createdAt": "2021-04-16 13:44:14",
-              "updatedAt": "2021-04-16 13:44:38"
-            }
-          ],
-          "thumbnail": [
-            {
-              "id": "df2fb9dc-3f85-4174-8e23-3a991b2af6ee",
-              "type": "thumbnail",
-              "location": "grand-reve/file/thumbnail/grandreve_cgi_ext_crop_final.jpg",
-              "name": "GrandReve_CGI_EXT_Crop_Final.jpg",
-              "textAlternative": null,
-              "size": 1604814,
-              "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/grandreve_cgi_ext_crop_final.jpg",
-              "createdAt": "2021-04-16 12:37:45",
-              "updatedAt": "2021-04-16 12:37:45"
-            }
-          ],
+          "video": {
+            "id": "1e0b527b-076f-4237-ab04-ca487b124e25",
+            "type": "video",
+            "location": "grand-reve/file/video/grand_reve-gallery-04__1200x550.png",
+            "name": "grand_reve-gallery-04__1200x550.png",
+            "textAlternative": "FF08ohAgQl4",
+            "size": 1369565,
+            "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/video/grand_reve-gallery-04__1200x550.png",
+            "createdAt": "2021-04-16 13:44:14",
+            "updatedAt": "2021-04-16 13:44:38"
+          },
+          "thumbnail": {
+            "id": "df2fb9dc-3f85-4174-8e23-3a991b2af6ee",
+            "type": "thumbnail",
+            "location": "grand-reve/file/thumbnail/grandreve_cgi_ext_crop_final.jpg",
+            "name": "GrandReve_CGI_EXT_Crop_Final.jpg",
+            "textAlternative": null,
+            "size": 1604814,
+            "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve/file/thumbnail/grandreve_cgi_ext_crop_final.jpg",
+            "createdAt": "2021-04-16 12:37:45",
+            "updatedAt": "2021-04-16 12:37:45"
+          },
           "brochureThumbnail": [
             {
               "id": "f34c6bc3-8977-4534-9c96-4bcc48f5d0ee",
@@ -552,19 +536,17 @@
                   "updatedAt": "2021-07-27 16:02:38"
                 }
               ],
-              "thumbnail": [
-                {
-                  "id": "fc383700-9d15-457e-8dd2-1bb003abee2e",
-                  "type": "thumbnail",
-                  "location": "grand-reve-is-piquing-the-interest-of-first-home-buyers-and-investors-alike/file/thumbnail/grandrevehero.jpeg",
-                  "name": "grandrevehero.jpeg",
-                  "textAlternative": null,
-                  "size": 325806,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve-is-piquing-the-interest-of-first-home-buyers-and-investors-alike/file/thumbnail/grandrevehero.jpeg",
-                  "createdAt": "2021-07-27 16:02:38",
-                  "updatedAt": "2021-07-27 16:02:38"
-                }
-              ]
+              "thumbnail": {
+                "id": "fc383700-9d15-457e-8dd2-1bb003abee2e",
+                "type": "thumbnail",
+                "location": "grand-reve-is-piquing-the-interest-of-first-home-buyers-and-investors-alike/file/thumbnail/grandrevehero.jpeg",
+                "name": "grandrevehero.jpeg",
+                "textAlternative": null,
+                "size": 325806,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve-is-piquing-the-interest-of-first-home-buyers-and-investors-alike/file/thumbnail/grandrevehero.jpeg",
+                "createdAt": "2021-07-27 16:02:38",
+                "updatedAt": "2021-07-27 16:02:38"
+              }
             }
           },
           {
@@ -623,19 +605,17 @@
                   "updatedAt": "2021-04-14 12:00:03"
                 }
               ],
-              "thumbnail": [
-                {
-                  "id": "23772bfc-74df-4d22-8139-f587d6aff906",
-                  "type": "thumbnail",
-                  "location": "redefining-luxury-in-the-hills-area-grand-reve-offers-an-exquisite-selection-of-apartments-for-all-price-points/file/thumbnail/gr-hero.jpeg",
-                  "name": "GR HERO.jpeg",
-                  "textAlternative": null,
-                  "size": 325806,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/redefining-luxury-in-the-hills-area-grand-reve-offers-an-exquisite-selection-of-apartments-for-all-price-points/file/thumbnail/gr-hero.jpeg",
-                  "createdAt": "2021-04-14 11:59:11",
-                  "updatedAt": "2021-04-14 11:59:11"
-                }
-              ],
+              "thumbnail": {
+                "id": "23772bfc-74df-4d22-8139-f587d6aff906",
+                "type": "thumbnail",
+                "location": "redefining-luxury-in-the-hills-area-grand-reve-offers-an-exquisite-selection-of-apartments-for-all-price-points/file/thumbnail/gr-hero.jpeg",
+                "name": "GR HERO.jpeg",
+                "textAlternative": null,
+                "size": 325806,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/redefining-luxury-in-the-hills-area-grand-reve-offers-an-exquisite-selection-of-apartments-for-all-price-points/file/thumbnail/gr-hero.jpeg",
+                "createdAt": "2021-04-14 11:59:11",
+                "updatedAt": "2021-04-14 11:59:11"
+              },
               "featuredThumbnail": [
                 {
                   "id": "be06cebf-0636-418c-afba-837aaa6365c1",
@@ -709,19 +689,17 @@
                   "updatedAt": "2021-03-17 15:02:46"
                 }
               ],
-              "thumbnail": [
-                {
-                  "id": "4565781f-8ee0-4fba-ad9a-fb8a6422af30",
-                  "type": "thumbnail",
-                  "location": "grand-reve-is-destined-to-set-a-new-benchmark-for-luxury-apartment-living-unlike-anything-that-has-been-offered-in-the-hills-area/file/thumbnail/grand-reve-hero.jpg",
-                  "name": "Grand reve HERO.jpg",
-                  "textAlternative": null,
-                  "size": 450402,
-                  "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve-is-destined-to-set-a-new-benchmark-for-luxury-apartment-living-unlike-anything-that-has-been-offered-in-the-hills-area/file/thumbnail/grand-reve-hero.jpg",
-                  "createdAt": "2021-03-17 15:02:46",
-                  "updatedAt": "2021-03-17 15:02:46"
-                }
-              ],
+              "thumbnail": {
+                "id": "4565781f-8ee0-4fba-ad9a-fb8a6422af30",
+                "type": "thumbnail",
+                "location": "grand-reve-is-destined-to-set-a-new-benchmark-for-luxury-apartment-living-unlike-anything-that-has-been-offered-in-the-hills-area/file/thumbnail/grand-reve-hero.jpg",
+                "name": "Grand reve HERO.jpg",
+                "textAlternative": null,
+                "size": 450402,
+                "url": "https://d126h31mg8tzcs.cloudfront.net/grand-reve-is-destined-to-set-a-new-benchmark-for-luxury-apartment-living-unlike-anything-that-has-been-offered-in-the-hills-area/file/thumbnail/grand-reve-hero.jpg",
+                "createdAt": "2021-03-17 15:02:46",
+                "updatedAt": "2021-03-17 15:02:46"
+              },
               "image": [
                 {
                   "id": "8913fe5a-b9af-4a4e-9ad0-99d60808c0a6",

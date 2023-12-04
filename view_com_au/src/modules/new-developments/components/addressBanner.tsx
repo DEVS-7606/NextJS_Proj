@@ -25,8 +25,8 @@ const AddressBanner = ({
   state,
   postalCode,
   shortenState,
-}: any) => {
-  const breadCrum = () => {
+}: Iprops) => {
+  const renderBreadCrum = () => {
     return (
       <div className="flex gap-4 hover:shadow-none md:px-0 lightScrollBar text-gray-500 my-4 text-sm lg:gap-2">
         <span className="flex gap-2">
@@ -52,7 +52,7 @@ const AddressBanner = ({
     );
   };
 
-  const enquireBtn = () => {
+  const renderEnquireBtn = () => {
     return (
       <Button
         title="Enquire Now"
@@ -67,7 +67,7 @@ const AddressBanner = ({
     );
   };
 
-  const socialMediaIcons = () => {
+  const renderSocialMediaIcons = () => {
     return (
       <div className="flex gap-4">
         <a
@@ -92,11 +92,7 @@ const AddressBanner = ({
     );
   };
 
-  const imageContainer = () => {
-    // const getImageUrl = ({ src }: ImageLoaderProps) => {
-    //   return src;
-    // };
-
+  const renderImageContainer = () => {
     return (
       <div className="w-full h-44 lg:w-2/5 relative overflow-hidden lg:h-auto object-cover">
         <div className="absolute z-10 top-4 right-4 text-black font-bold bg-white px-4 py-4 hover:bg-zinc-300 active:bg-zinc-300 rounded-lg text-sm ">
@@ -114,7 +110,7 @@ const AddressBanner = ({
 
   return (
     <div>
-      {breadCrum()}
+      {renderBreadCrum()}
       <div className="flex flex-col lg:flex-row w-full gap-4">
         <HeroContainer
           title={title}
@@ -123,11 +119,11 @@ const AddressBanner = ({
           subTitleClassName=""
         >
           <div className="flex flex-col lg:flex-row gap-4 lg:justify-between">
-            {enquireBtn()}
-            {socialMediaIcons()}
+            {renderEnquireBtn()}
+            {renderSocialMediaIcons()}
           </div>
         </HeroContainer>
-        {imageContainer()}
+        {renderImageContainer()}
       </div>
     </div>
   );
