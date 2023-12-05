@@ -86,7 +86,7 @@ const OffThePlanForSale = (props: {
   const renderPropertySpecs = (property: Property) => {
     return (
       <div className="w-full flex flex-col md:flex-row md:justify-between text-lightGray">
-        <div className="flex gap-2">
+        <div className="flex xxs:gap-2 gap-1 items-center">
           {property.bedrooms && (
             <div className="flex items-center gap-2 pr-2 border-r">
               <Image src={bedrooms} alt="bedrooms" />
@@ -106,7 +106,9 @@ const OffThePlanForSale = (props: {
             </div>
           )}
           {property.discr && (
-            <span className="text-sm capitalize pl-2">{property.discr}</span>
+            <span className="xxs:text-sm text-xs capitalize pl-2">
+              {property.discr}
+            </span>
           )}
         </div>
       </div>
