@@ -1,1 +1,1 @@
-# NextJS_Proj
+# VIEW PROJECT
