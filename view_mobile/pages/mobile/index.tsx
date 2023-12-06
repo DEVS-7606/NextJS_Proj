@@ -3,11 +3,9 @@ import Main from "../../components/mobile/main";
 
 const MobileView = (): JSX.Element => {
   return (
-    <>
-      <Layout>
-        <Main />
-      </Layout>
-    </>
+    <Layout>
+      <Main />
+    </Layout>
   );
 };
 
