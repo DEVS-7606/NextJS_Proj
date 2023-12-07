@@ -1,4 +1,4 @@
-import FeaturesAndAmenities from "../featuresAndAmenities";
+import FeaturesAndAmenities from "./featuresAndAmenities";
 import AboutProperty from "./aboutProperty";
 import AddressBanner from "./addressBanner";
 import Container from "@/shared/components/pageContainer/pageContainer";

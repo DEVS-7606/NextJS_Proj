@@ -1,22 +1,27 @@
 interface Iprops {
   className: string;
+  mainClassName?: string;
+  titleClassName?: string;
   subTitleClassName?: string;
   title: string;
   subTitle: string;
   children?: JSX.Element;
+  isRounded: string | number;
 }
 
 const HeroContainer = (props: Iprops) => {
   return (
     <section
-      className={`bg-saltWhite p-6 md:px-16 md:py-12 rounded-xl text-almostBlack relative ${props.className}`}
+      className={`bg-saltWhite rounded-${props.isRounded} text-almostBlack relative ${props.className}`}
     >
-      <div>
-        <h1 className="text-5xl font-bold headLine lg:text-74 lg:leading-82 break-words">
+      <div className={props.mainClassName}>
+        <h1
+          className={`text-5xl font-bold headLine lg:text-74 lg:leading-82 break-words ${props.titleClassName}`}
+        >
           {props.title}
         </h1>
         <p
-          className={`text-sm font-normal md:text-base mt-4${props.subTitleClassName}`}
+          className={`text-sm font-normal md:text-base mt-4 ${props.subTitleClassName}`}
         >
           {props.subTitle}
         </p>

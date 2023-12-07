@@ -1,13 +1,12 @@
 import LdJson from "./LdJson";
 import SEO from "./SEO";
-import viewLogo from "../../../public/images/viewLogo.svg";
 
 interface Iprops {
   title: string;
   details: any;
 }
 
-const AgentDetailSEO = (props: Iprops) => {
+const AgencyDetailSEO = (props: Iprops) => {
   const Details = props.details.data;
 
   const agencyDesc = `Real estate agency information and contact details for BigginScott Richmond in Richmond on resi.uatz.view.com.au`;
@@ -44,4 +43,4 @@ const AgentDetailSEO = (props: Iprops) => {
   );
 };
 
-export default AgentDetailSEO;
+export default AgencyDetailSEO;

@@ -1,5 +1,9 @@
-import AgentDetailSEO from "@/modules/realEstateAgency/agentDetailSEO";
+import AgencyDetailPage from "@/modules/realEstateAgency/components/agencyDetailPage";
+import AgencyDetailSEO from "@/modules/realEstateAgency/components/agencyDetailSEO";
+import BreadCrum from "@/modules/realEstateAgency/components/breadCrum";
+import MarketPerformance from "@/modules/realEstateAgency/components/marketPerformance";
 import Layout from "@/shared/components/Layout/Layout";
+import Container from "@/shared/components/pageContainer/pageContainer";
 
 import type { GetServerSideProps, GetServerSidePropsContext } from "next";
 
@@ -24,10 +28,15 @@ export const getServerSideProps: GetServerSideProps<any> = async (
 const RealEstateAgency = (props: MyProps) => {
   return (
     <Layout>
-      <AgentDetailSEO
+      <AgencyDetailSEO
         title="resi.uatz.view.com.au"
         details={props.repo.pageProps}
       />
+      <Container>
+        <BreadCrum breadCrums={props.repo.pageProps.data.breadcrumbs} />
+        <AgencyDetailPage details={props.repo.pageProps} />
+        <MarketPerformance details={props.repo.pageProps} />
+      </Container>
     </Layout>
   );
 };
