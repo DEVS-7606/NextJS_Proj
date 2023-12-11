@@ -48,10 +48,6 @@ interface Iprops {
     | ReactPortal
     | null
     | undefined;
-  toggleClassName?: string;
-  propsChildClass?: string;
-  propsChildClassIfTrue?: string;
-  propsChildClassIfFalse?: string;
 }
 
 const ToggleButton = (props: Iprops) => {
@@ -73,23 +69,17 @@ const ToggleButton = (props: Iprops) => {
         className={`flex justify-start items-center cursor-pointer ${props.className}`}
         onClick={() => toggle()}
       >
-        <span className={`${props.toggleClassName}`}>
+        <span className={`flex flex-row items-center`}>
           {show ? props.ShowLess : props.ShowMore}
         </span>
-        <span
-          className={`${props.propsChildClass} ${
-            show ? props.propsChildClassIfFalse : props.propsChildClassIfTrue
-          }`}
-        >
-          {props.children}
-        </span>
+        {props.children}
       </div>
     );
   };
   const renderValue = () => {
     return (
       <div
-        className={`overflow-hidden transition-all duration-500 ${props.valueClassName}`} /* ${show? props.trueValueClass:falseValueClass} */
+        className={`overflow-hidden transition-all duration-500 ${props.valueClassName}`}
         ref={customRef}
         style={{ height: heightRef.current }}
       >

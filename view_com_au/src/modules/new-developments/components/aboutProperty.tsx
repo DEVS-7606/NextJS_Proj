@@ -133,16 +133,21 @@ const AboutProperty = ({
         mainClassName="relative"
         initialHeight="200px"
         className="text-seaBlue gap-1"
-        ShowMore="Read more"
-        ShowLess="Read less"
+        ShowMore={
+          <div className="">
+            {"Read More "}
+            <Image src={downArrow} alt="downArrow" />
+          </div>
+        }
+        ShowLess={
+          <>
+            {"Read Less "}
+            <Image src={downArrow} alt="downArrow" className="rotate-180" />
+          </>
+        }
         valueClassName="pl-8 des relative overflow-hidden transition-all ease-in-out duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent after:h-10"
         value={renderMoreDetailsOfProperty()}
-        propsChildClass=""
-        propsChildClassIfFalse="rotate-180"
-        propsChildClassIfTrue="rotate-0"
-      >
-        <Image src={downArrow} alt="downArrow" />
-      </ToggleButton>
+      ></ToggleButton>
     </div>
   );
 };

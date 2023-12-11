@@ -38,7 +38,6 @@ const InsightOnArea = (props: Iprops) => {
           mainClassName="flex flex-col-reverse"
           initialHeight="0px"
           className="justify-between flex-row-reverse"
-          toggleClassName="flex flex-row items-center"
           ShowLess={
             <Image
               src={arrow}
@@ -74,7 +73,6 @@ const InsightOnArea = (props: Iprops) => {
           mainClassName="flex flex-col-reverse"
           initialHeight="0px"
           className="justify-between flex-row-reverse"
-          toggleClassName="flex flex-row items-center"
           ShowLess={
             <Image
               src={arrow}

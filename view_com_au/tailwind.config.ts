@@ -39,6 +39,7 @@ const config: Config = {
         140: "140px",
         130: "130px",
         120: "120px",
+        220: "220px",
         350: "350px",
         300: "300px",
         326: "326px",
@@ -49,6 +50,10 @@ const config: Config = {
         437: "437px",
         198: "198px",
         "120px": "120px",
+      },
+      minHeight: {
+        192: "192px",
+        108: "108px",
       },
       maxWidth: {
         1200: "1200px",

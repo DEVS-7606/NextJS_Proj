@@ -90,7 +90,6 @@ const CustomerReview = (props: Iprops): JSX.Element => {
         className="gap-1 text-seaBlue mt-2"
         ShowLess="Show Less"
         ShowMore="Show More"
-        valueClassName=""
         value={props.review}
       >
         <Image
@@ -101,8 +100,6 @@ const CustomerReview = (props: Iprops): JSX.Element => {
           }`}
         />
       </ToggleButton>
-      {/* {renderReview()}
-      {renderShowMoreAndLessBtn()} */}
       {renderReviewerName()}
     </div>
   );

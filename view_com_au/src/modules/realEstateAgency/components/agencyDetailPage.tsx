@@ -47,9 +47,9 @@ const AgencyDetailPage = (props: Iprops) => {
         className="flex flex-row items-center gap-1 my-2"
       >
         <Image src={internetExplorer} alt="globe" width={22} height={22} />
-        <a className="underline text-seaBlue text-sm">
+        <span className="underline text-seaBlue text-sm">
           {props.details.data.website}
-        </a>
+        </span>
       </a>
     );
   };
