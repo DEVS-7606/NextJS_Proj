@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { useRef, useState } from "react";
 import StarImage from "../../../../public/images/star.svg";
-import downArrow from "../../../../public/images/downArrow.svg";
 import ToggleButton from "@/shared/components/toggleMoreOrLessBtn/toggleMoreOrLessBtn";
+import DownArrow from "@/shared/components/downArrow/downArrow";
 
 interface Iprops {
   index: number;
@@ -12,18 +11,6 @@ interface Iprops {
 }
 
 const CustomerReview = (props: Iprops): JSX.Element => {
-  const [showFullReview, setShowFullReview] = useState(false);
-  const heightRef = useRef<string>("96px");
-  const reviewRef: any = useRef(null);
-
-  const renderShowFullReviewBtn = (): void => {
-    setShowFullReview(!showFullReview);
-    if (!showFullReview) {
-      return (heightRef.current = reviewRef.current?.scrollHeight);
-    }
-    heightRef.current = "96px";
-  };
-
   const renderStar = () => {
     return (
       <div className="flex">
@@ -45,36 +32,6 @@ const CustomerReview = (props: Iprops): JSX.Element => {
     );
   };
 
-  const renderReview = () => {
-    return (
-      <div
-        className={`overflow-hidden transition-all duration-500`}
-        ref={reviewRef}
-        style={{ height: heightRef.current }}
-      >
-        {props.review}
-      </div>
-    );
-  };
-
-  const renderShowMoreAndLessBtn = () => {
-    return (
-      <div
-        className="flex items-center gap-1 text-seaBlue mt-2 cursor-pointer"
-        onClick={() => renderShowFullReviewBtn()}
-      >
-        {showFullReview ? "Show less" : "Show more"}
-        <Image
-          src={downArrow}
-          alt="downArrow"
-          className={`transform duration-500 ${
-            showFullReview ? "rotate-180" : "rotate-0"
-          }`}
-        />
-      </div>
-    );
-  };
-
   const renderReviewerName = () => {
     return <div className="text-sm font-bold mt-4">{props.reviewer}</div>;
   };
@@ -88,18 +45,20 @@ const CustomerReview = (props: Iprops): JSX.Element => {
       <ToggleButton
         initialHeight="96px"
         className="gap-1 text-seaBlue mt-2"
-        ShowLess="Show Less"
-        ShowMore="Show More"
+        ShowLess={
+          <div className="flex items-center gap-1">
+            Show Less
+            <DownArrow rotateAngle="rotate-180" />
+          </div>
+        }
+        ShowMore={
+          <div className="flex items-center gap-1">
+            Show More
+            <DownArrow rotateAngle="rotate-0" />
+          </div>
+        }
         value={props.review}
-      >
-        <Image
-          src={downArrow}
-          alt="downArrow"
-          className={`transform duration-500 ${
-            showFullReview ? "rotate-180" : "rotate-0"
-          }`}
-        />
-      </ToggleButton>
+      />
       {renderReviewerName()}
     </div>
   );

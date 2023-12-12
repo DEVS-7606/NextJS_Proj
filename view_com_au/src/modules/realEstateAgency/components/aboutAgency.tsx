@@ -1,6 +1,5 @@
 import ToggleButton from "@/shared/components/toggleMoreOrLessBtn/toggleMoreOrLessBtn";
-import downArrow from "../../../../public/images/downArrow.svg";
-import Image from "next/image";
+import DownArrow from "@/shared/components/downArrow/downArrow";
 
 const AboutAgency = (props: any) => {
   const renderAgencyDetail = () => {
@@ -23,17 +22,17 @@ const AboutAgency = (props: any) => {
         className="text-seaBlue gap-1"
         ShowMore={
           <div className="flex gap-2 items-stretch">
-            {"Read More"}
-            <Image src={downArrow} alt="downArrow" />
+            Read More
+            <DownArrow rotateAngle="rotate-0" />
           </div>
         }
         ShowLess={
           <div className="flex gap-2 items-stretch">
-            {"Read Less "}
-            <Image src={downArrow} alt="downArrow" className="rotate-180" />
+            Read Less
+            <DownArrow rotateAngle="rotate-180" />
           </div>
         }
-        valueClassName="pl-8 relative ease-in-out before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent"
+        valueClassName="pl-8 relative ease-in-out before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent pb-20"
         value={renderAgencyDetail()}
       />
     </div>

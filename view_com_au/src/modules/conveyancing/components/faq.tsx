@@ -15,7 +15,7 @@ const FAQ = (props: IProps): JSX.Element => {
         className="justify-between py-sm flex-row-reverse"
         ShowLess="-"
         ShowMore="+"
-        valueClassName="text-sm font-normal flex flex-col gap-3 mb-4"
+        valueClassName="text-sm font-normal flex flex-col gap-3 after:mb-4"
         value={props.answer}
       >
         <h3 className="text-base font-bold pr-2 tracking-wide">

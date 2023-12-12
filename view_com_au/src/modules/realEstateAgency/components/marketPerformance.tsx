@@ -49,43 +49,23 @@ const MarketPerformance = (props: Iprops) => {
       },
     ],
   };
-  const renderSalesPerformance = () => {
+
+  const renderPerformance = (
+    title: string,
+    stats: {
+      value: any;
+      description: string;
+    }[]
+  ) => {
     return (
       <div className="bg-shirtBlue mt-6 rounded-xl py-4 px-6 flex flex-col gap-2">
-        <span className="text-sm font-bold">Sales Performance</span>
+        <span className="text-sm font-bold">{title} Performance</span>
         <div className="md:flex md:flex-row md:gap-4">
-          {performanceStats.SALES_STATS.map((stat, index) => {
+          {stats.map((stat, index) => {
             return (
               <div
                 className={`flex flex-col py-4 items-start justify-center flex-1 relative md:py-0 md:border-b-0 ${
-                  !(performanceStats.SALES_STATS.length - 1 === index) &&
-                  "md:border-r border-b"
-                }`}
-                key={index}
-              >
-                <span className="text-xl font-bold">
-                  {index == 0 && `$`}
-                  {stat.value}
-                </span>
-                <p className="text-sm font-normal">{stat.description}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    );
-  };
-  const renderRentPerformance = () => {
-    return (
-      <div className="bg-shirtBlue mt-6 rounded-xl py-4 px-6 flex flex-col gap-2">
-        <span className="text-sm font-bold">Rent Performance</span>
-        <div className="md:flex md:flex-row md:gap-4">
-          {performanceStats.RENT_STATS.map((stat, index) => {
-            return (
-              <div
-                className={`flex flex-col py-4 items-start justify-center flex-1 relative md:py-0 md:border-b-0 ${
-                  !(performanceStats.RENT_STATS.length - 1 === index) &&
-                  "md:border-r border-b"
+                  !(stats.length - 1 === index) && "md:border-r border-b"
                 }`}
                 key={index}
               >
@@ -101,6 +81,7 @@ const MarketPerformance = (props: Iprops) => {
       </div>
     );
   };
+
   return (
     <div className="text-almostBlack mt-8 pb-8 border-b">
       <h2 className="text-lg font-bold">Market performance</h2>
@@ -109,9 +90,9 @@ const MarketPerformance = (props: Iprops) => {
         leased 752 properties on resi.stgz.view.com.au
       </p>
 
-      {renderSalesPerformance()}
+      {renderPerformance("Sales", performanceStats.SALES_STATS)}
 
-      {renderRentPerformance()}
+      {renderPerformance("Rent", performanceStats.RENT_STATS)}
     </div>
   );
 };

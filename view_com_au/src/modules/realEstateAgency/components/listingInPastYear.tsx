@@ -3,6 +3,7 @@ import bed from "../../../../public/images/Bedroom.svg";
 import car from "../../../../public/images/parking.svg";
 import bathtub from "../../../../public/images/Bathtub.svg";
 import { useEffect } from "react";
+import GetStaticImageLoader from "@/shared/components/getStaticImageLoader/getStaticImageLoader";
 
 interface Iprops {
   details: any;
@@ -45,23 +46,20 @@ const ListingInPastYear = (props: Iprops) => {
 
   const renderCategories = () => {
     return (
-      <div className="flex flex-row items-center h-20 relative mt-8">
-        <div className="flex items-center justify-evenly self-stretch flex-1 relative bg-shirtBlue rounded-xl">
-          {PROPERTIES_STATUS.map((status, index) => {
-            return (
-              <a
-                key={index}
-                href={`/real-estate-agency/${props.details.slug}/${status.status}`}
-              >
-                <div className="flex flex-col gap-0.5 items-center relative cursor-pointer">
-                  {renderNumPropertiesInCategory(index, status)}
-                  <p className="text-sm font-bold">{status.displayStatus}</p>
-                  {renderSelectedCategory(index, status)}
-                </div>
-              </a>
-            );
-          })}
-        </div>
+      <div className="flex flex-row h-20 mt-8 items-center justify-evenly self-stretch flex-1 relative bg-shirtBlue rounded-xl">
+        {PROPERTIES_STATUS.map((status, index) => {
+          return (
+            <a
+              key={index}
+              href={`/real-estate-agency/${props.details.slug}/${status.status}`}
+              className="flex flex-col gap-0.5 items-center relative cursor-pointer"
+            >
+              {renderNumPropertiesInCategory(index, status)}
+              <p className="text-sm font-bold">{status.displayStatus}</p>
+              {renderSelectedCategory(index, status)}
+            </a>
+          );
+        })}
       </div>
     );
   };
@@ -95,7 +93,7 @@ const ListingInPastYear = (props: Iprops) => {
               : ""
             : "w-16 mx-auto h-1 bg-darkerSeaBlue rounded-sm absolute -bottom-4"
         }`}
-      ></span>
+      />
     );
   };
 
@@ -125,26 +123,24 @@ const ListingInPastYear = (props: Iprops) => {
           }`
         ].data.map((property: any, index: number) => {
           return (
-            <div key={index} className="relative">
-              <div className="bg-white rounded-lg outline-none relative w-full shadow fill-almostBlack border">
-                {getPropertyImage(
-                  property?.heroImageUrl,
-                  property?.imageUrlSlug
+            <div
+              key={index}
+              className="bg-white rounded-lg outline-none relative w-full shadow fill-almostBlack border"
+            >
+              {getPropertyImage(property?.heroImageUrl, property?.imageUrlSlug)}
+              <div className="p-4 min-h-108">
+                {getPropertyPrice(property.priceText)}
+                {getPropertyAddress(
+                  property.unitNumber,
+                  property.streetNumber,
+                  property.streetName,
+                  property.suburbName
                 )}
-                <div className="p-4 min-h-108">
-                  {getPropertyPrice(property.priceText)}
-                  {getPropertyAddress(
-                    property.unitNumber,
-                    property.streetNumber,
-                    property.streetName,
-                    property.suburbName
-                  )}
-                  {getPropertySpecs(
-                    property.bedrooms,
-                    property.bathrooms,
-                    property.carparks
-                  )}
-                </div>
+                {getPropertySpecs(
+                  property.bedrooms,
+                  property.bathrooms,
+                  property.carparks
+                )}
               </div>
             </div>
           );
@@ -153,34 +149,26 @@ const ListingInPastYear = (props: Iprops) => {
     );
   };
 
-  const getPropertyImage = (imageSrc: any, imageSlug: any) => {
-    let src = `https://resi.stgz.view.com.au/viewstatic/images/listing/${imageSlug}/400-w/${
-      imageSrc?.split("/")[2]
-    }`;
-
+  const getPropertyImage = (imageSrc: string, imageSlug: string) => {
     return (
-      <div className="h-48 min-h-192 rounded-t-lg overflow-hidden relative">
-        <a>
-          <span>
-            <Image
-              src={src}
-              loader={() => src}
-              alt="placeHolder"
-              layout="fill"
-            />
-          </span>
-        </a>
+      <div className="h-48 min-h-192 rounded-t-lg overflow-hidden relative cursor-pointer">
+        <Image
+          src={`https://resi.stgz.view.com.au/viewstatic/images/listing/${imageSlug}/400-w/${
+            imageSrc?.split("/")[2]
+          }`}
+          loader={GetStaticImageLoader}
+          alt="placeHolder"
+          layout="fill"
+        />
       </div>
     );
   };
 
   const getPropertyPrice = (priceText: string) => {
     return (
-      <div className="flex mb-1.5 w-220">
-        <p className="text-base font-bold mr-2 truncate text-almostBlack">
-          {priceText}
-        </p>
-      </div>
+      <p className="flex mb-1.5 w-220 text-base font-bold mr-2 truncate text-almostBlack">
+        {priceText}
+      </p>
     );
   };
 
@@ -191,13 +179,14 @@ const ListingInPastYear = (props: Iprops) => {
     suburbName: string
   ) => {
     return (
-      <a href="#">
-        <span className="text-sm font-normal text-lightGray mg-1.5 truncate">
-          {unitNumber && `${unitNumber}/`}
-          {streetNumber && `${streetNumber} `}
-          {streetName && `${streetName} `}
-          {suburbName && suburbName}
-        </span>
+      <a
+        className="text-sm font-normal text-lightGray mg-1.5 truncate"
+        href="#"
+      >
+        {unitNumber && `${unitNumber}/`}
+        {streetNumber && `${streetNumber} `}
+        {streetName && `${streetName} `}
+        {suburbName && suburbName}
       </a>
     );
   };
@@ -209,10 +198,10 @@ const ListingInPastYear = (props: Iprops) => {
   ) => {
     return (
       <div className="w-full flex flex-col md:flex-row md:justify-between text-lightGray mt-1">
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 text-sm items-center">
           {bedrooms > 0 && (
             <div
-              className={`flex items-center text-sm gap-2 pr-2 ${
+              className={`flex items-center gap-2 pr-2 ${
                 bathrooms > 0 && "border-r"
               }`}
             >

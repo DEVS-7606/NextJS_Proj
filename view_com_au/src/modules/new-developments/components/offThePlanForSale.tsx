@@ -3,6 +3,7 @@ import placeHolder from "../../../../public/images/placeholder.png";
 import bedrooms from "../../../../public/images/Bedroom.svg";
 import car from "../../../../public/images/parking.svg";
 import bathroom from "../../../../public/images/Bathtub.svg";
+import GetStaticImageLoader from "@/shared/components/getStaticImageLoader/getStaticImageLoader";
 
 interface Property {
   id: string;
@@ -59,12 +60,13 @@ const OffThePlanForSale = (props: {
       <div className="flex justify-center items-center">
         <div className="h-20 w-20 relative rounded-lg overflow-hidden">
           <Image
-            loader={() => src}
+            loader={GetStaticImageLoader}
             src={src}
             alt={
               property.files.thumbnail ? property.files.thumbnail.name : "NA"
             }
             layout="fill"
+            className="object-cover"
           />
         </div>
       </div>
@@ -85,32 +87,30 @@ const OffThePlanForSale = (props: {
 
   const renderPropertySpecs = (property: Property) => {
     return (
-      <div className="w-full flex flex-col md:flex-row md:justify-between text-lightGray">
-        <div className="flex xxs:gap-2 gap-1 items-center">
-          {property.bedrooms && (
-            <div className="flex items-center gap-2 pr-2 border-r">
-              <Image src={bedrooms} alt="bedrooms" />
-              <span>{property.bedrooms}</span>
-            </div>
-          )}
-          {property.bathrooms && (
-            <div className="flex items-center gap-2 pr-2 border-r">
-              <Image src={bathroom} alt="carSpaces" />
-              <span>{property.bathrooms}</span>
-            </div>
-          )}
-          {property.carSpaces && (
-            <div className="flex items-center gap-2 pr-2 border-r">
-              <Image src={car} alt="carSpaces" />
-              <span>{property.carSpaces}</span>
-            </div>
-          )}
-          {property.discr && (
-            <span className="xxs:text-sm text-xs capitalize pl-2">
-              {property.discr}
-            </span>
-          )}
-        </div>
+      <div className="w-full text-lightGray flex xxs:gap-2 gap-1 items-center">
+        {property.bedrooms && (
+          <div className="flex items-center gap-2 pr-2 border-r">
+            <Image src={bedrooms} alt="bedrooms" />
+            <span>{property.bedrooms}</span>
+          </div>
+        )}
+        {property.bathrooms && (
+          <div className="flex items-center gap-2 pr-2 border-r">
+            <Image src={bathroom} alt="bathrooms" />
+            <span>{property.bathrooms}</span>
+          </div>
+        )}
+        {property.carSpaces && (
+          <div className="flex items-center gap-2 pr-2 border-r">
+            <Image src={car} alt="carSpaces" />
+            <span>{property.carSpaces}</span>
+          </div>
+        )}
+        {property.discr && (
+          <span className="xxs:text-sm text-xs capitalize pl-2">
+            {property.discr}
+          </span>
+        )}
       </div>
     );
   };

@@ -15,27 +15,21 @@ interface Iprops {
 const AgencyDetailPage = (props: Iprops) => {
   const renderImageContainer = () => {
     return (
-      <div className="w-full h-56 md:h-auto mt-4 md:mt-0 md:w-2/5">
-        <div className="w-full h-full relative">
-          <span>
-            <Image
-              src={PropertyImage}
-              alt="property Image"
-              layout="fill"
-              className="w-full relative h-full cursor-pointer rounded-xl object-cover"
-            />
-          </span>
-        </div>
+      <div className="w-full h-56 md:h-auto mt-4 md:mt-0 md:w-2/5 relative">
+        <Image
+          src={PropertyImage}
+          alt="property Image"
+          layout="fill"
+          className="w-full relative h-full cursor-pointer rounded-xl object-cover"
+        />
       </div>
     );
   };
   const renderAgencyLogo = () => {
     return (
-      <div className="bg-[#010037] w-full">
-        <div className="flex justify-center items-center px-5 py-2 h-full">
-          <div className="flex justify-center items-center relative h-6 w-28">
-            <Image src={agencyLogo} alt={props.details.data.name} />
-          </div>
+      <div className="bg-[#010037] flex justify-center items-center px-5 py-2">
+        <div className="relative h-6 w-28">
+          <Image src={agencyLogo} alt={props.details.data.name} />
         </div>
       </div>
     );

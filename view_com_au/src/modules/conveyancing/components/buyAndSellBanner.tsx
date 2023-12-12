@@ -30,12 +30,3 @@ const BuyAndSellBanner = () => {
 };
 
 export default BuyAndSellBanner;
-// .p-6, .md:px-16, .md:py-12, .bg-at-primary-50, .rounded-xl, .w-full, .relative
-
-//.text-at-5xl, .font-bold, .font-golos, .lg:text-at-7xl, .break-words
-//.text-at-5xl, .font-bold, .font-golos, .lg:text-at-7xl, .break-words
-// .text-at-5xl, .font-bold, .font-golos, .lg:text-at-7xl, .break-words
-
-// .text-sm, .font-normal, .font-dmSans, .md:text-base, .mt-4, .lg:text-lg
-// .text-sm, .font-normal, .font-dmSans, .md:text-base, .mt-4
-// .text-sm, .font-normal, .font-dmSans, .md:text-base, .mt-4

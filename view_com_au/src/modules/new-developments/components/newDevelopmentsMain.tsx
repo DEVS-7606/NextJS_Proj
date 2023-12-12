@@ -4,7 +4,7 @@ import AddressBanner from "./addressBanner";
 import Container from "@/shared/components/pageContainer/pageContainer";
 import OffThePlanForSale from "./offThePlanForSale";
 import InsightOnArea from "./insightOnArea";
-import SuburbProfile from "@/modules/conveyancing/components/suburbProfile";
+import SuburbProfile from "./suburbProfile";
 
 const NewDevelopmentsMain = (props: any) => {
   const addressDetail = props.addressDetail.data.developmentDetail;

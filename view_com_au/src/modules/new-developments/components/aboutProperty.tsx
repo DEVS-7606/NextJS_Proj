@@ -6,6 +6,7 @@ import home from "../../../../public/images/new-dev-home.svg";
 import downArrow from "../../../../public/images/downArrow.svg";
 import Image from "next/image";
 import ToggleButton from "@/shared/components/toggleMoreOrLessBtn/toggleMoreOrLessBtn";
+import DownArrow from "@/shared/components/downArrow/downArrow";
 
 const AboutProperty = ({
   title,
@@ -134,16 +135,16 @@ const AboutProperty = ({
         initialHeight="200px"
         className="text-seaBlue gap-1"
         ShowMore={
-          <div className="">
-            {"Read More "}
-            <Image src={downArrow} alt="downArrow" />
+          <div className="flex gap-2 items-stretch">
+            Read More
+            <DownArrow rotateAngle="rotate-0" />
           </div>
         }
         ShowLess={
-          <>
-            {"Read Less "}
-            <Image src={downArrow} alt="downArrow" className="rotate-180" />
-          </>
+          <div className="flex gap-2 items-stretch">
+            Read Less
+            <DownArrow rotateAngle="rotate-180" />
+          </div>
         }
         valueClassName="pl-8 des relative overflow-hidden transition-all ease-in-out duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent after:h-10"
         value={renderMoreDetailsOfProperty()}

@@ -9,11 +9,9 @@ const ConveyancingMain = (): JSX.Element => {
   const renderFaq = () => {
     return (
       <div className="lg:w-3/5 w-full mb-4">
-        <section className="flex items-center text-almostBlack lg:mb-6 mb-4">
-          <h2 className="text-2xl font-bold bg-opacity-0 text-start  tracking-wider">
-            Frequently Asked Questions
-          </h2>
-        </section>
+        <h2 className="flex items-center text-almostBlack lg:mb-6 mb-4 text-2xl font-bold bg-opacity-0 text-start tracking-wider">
+          Frequently Asked Questions
+        </h2>
         <section className="text-almostBlack">
           {FREQ_ASKED_QUES.map((data, index) => {
             return (
