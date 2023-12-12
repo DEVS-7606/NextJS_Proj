@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 import bed from "../../../../public/images/Bedroom.svg";
 import car from "../../../../public/images/parking.svg";
 import bathtub from "../../../../public/images/Bathtub.svg";
+import { useEffect } from "react";
 
 interface Iprops {
   details: any;
@@ -34,13 +34,22 @@ const ListingInPastYear = (props: Iprops) => {
     },
   ];
 
+  useEffect(() => {
+    if (props.params?.propertyStatusSlug) {
+      window.scrollTo({
+        top: 950,
+        behavior: "smooth",
+      });
+    }
+  }, [props.params]);
+
   const renderCategories = () => {
     return (
       <div className="flex flex-row items-center h-20 relative mt-8">
         <div className="flex items-center justify-evenly self-stretch flex-1 relative bg-shirtBlue rounded-xl">
           {PROPERTIES_STATUS.map((status, index) => {
             return (
-              <Link
+              <a
                 key={index}
                 href={`/real-estate-agency/${props.details.slug}/${status.status}`}
               >
@@ -49,7 +58,7 @@ const ListingInPastYear = (props: Iprops) => {
                   <p className="text-sm font-bold">{status.displayStatus}</p>
                   {renderSelectedCategory(index, status)}
                 </div>
-              </Link>
+              </a>
             );
           })}
         </div>
