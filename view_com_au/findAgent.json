@@ -4,6 +4,7 @@
       "data": {
         "youtube": null,
         "numberOfSoldListings": 205,
+        "metaDescription": "Real estate agency information and contact details for BigginScott Richmond in Richmond on resi.uatz.view.com.au",
         "description": "Occupying shop fronts 24, 26 \u0026 28 Bridge Rd, Richmond.\r\nProminently located with triple window street frontage.\r\nGreat exposure for both sale and rental properties with huge pedestrian\r\ntraffic close to the main tram stop and train stations. \r\n\r\nExclusive restaurants, shopping and the MCG ensure a regular street clientele!\r\nRichmond Office is the Number 1 performing branch in the Biggin \u0026\r\nScott network. We are also the No 1. Agent in the Richmond ,\r\nAbbotsford, Collingwood, Hawthorn \u0026 East Melbourne market place.",
         "instagram": "https://www.instagram.com/bigginscott_richmond/?hl=en",
         "linkedin": "https://www.linkedin.com/company/82634436/admin/feed/posts/",
@@ -1293,6 +1294,85 @@
       "slug": "biggin-scott-richmond-4326",
       "pageNo": 1
     },
+    "metaData": [
+      { "name": "apple-mobile-web-app-capable", "content": "yes" },
+      { "name": "author", "content": "resi.uatz.view.com.au" },
+      { "name": "og:site_name", "content": "resi.uatz.view.com.au" },
+      {
+        "name": "image",
+        "content": "https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png"
+      },
+      {
+        "name": "og:image",
+        "content": "https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png"
+      },
+      {
+        "name": "twitter:image",
+        "content": "https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png"
+      },
+      {
+        "name": "og:type",
+        "content": "website"
+      },
+      {
+        "name": "theme-color",
+        "content": "#FFFFFF"
+      },
+      {
+        "name": "smartbanner:title",
+        "content": "resi.stgz.view.com.au - Real Estate"
+      },
+      { "name": "smartbanner:author", "content": "resi.stgz.view.com.au" },
+      { "name": "smartbanner:price", "content": "free" },
+      {
+        "name": "smartbanner:price-suffix-apple",
+        "content": " - On the App Store"
+      },
+      {
+        "name": "smartbanner:price-suffix-google",
+        "content": " - In Google Play"
+      },
+      {
+        "name": "smartbanner:icon-apple",
+        "content": "/images/apple-icon.png"
+      },
+      {
+        "name": "smartbanner:icon-google",
+        "content": "/images/android-icon.png"
+      },
+      {
+        "name": "smartbanner:button",
+        "content": "INSTALL"
+      },
+      {
+        "name": "smartbanner:button-url-apple",
+        "content": "https://play.google.com/store/apps/details?id=au.com.realestateview&hl=en"
+      },
+      {
+        "name": "smartbanner:button-url-google",
+        "content": "https://play.google.com/store/apps/details?id=au.com.realestateview&hl=en"
+      },
+      {
+        "name": "smartbanner:enabled-platforms",
+        "content": "android"
+      },
+      {
+        "name": "smartbanner:hide-path",
+        "content": "/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@ViewComAu"
+      },
+      {
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "name": "twitter:creator",
+        "content": "@ViewComAu"
+      }
+    ],
     "query": { "page": "1", "agencySlug": "biggin-scott-richmond-4326" }
   }
 }

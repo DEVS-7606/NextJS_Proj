@@ -1,27 +1,23 @@
-import LdJson from "./LdJson";
-import SEO from "./SEO";
+import LdJson from "../../../shared/components/LdJson/LdJson";
+import SEO from "../../../shared/components/SEO/SEO";
 
 interface Iprops {
   title: string;
   details: any;
+  metaData: any;
 }
 
 const AgencyDetailSEO = (props: Iprops) => {
   const Details = props.details.data;
-
-  const agencyDesc = `Real estate agency information and contact details for BigginScott Richmond in Richmond on resi.uatz.view.com.au`;
-  const agencyImage = `https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png`;
+  const commonMetaData = props.metaData;
 
   const agencyMetaDetails = [
     { name: "title", content: Details.name },
     { name: "og:title", content: `${Details.name}|${props.title}` },
     { name: "twitter:title", content: `${Details.name}|${props.title}|view` },
-    { name: "description", content: agencyDesc },
-    { name: "og:description", content: agencyDesc },
-    { name: "twitter:description", content: agencyDesc },
-    { name: "image", content: agencyImage },
-    { name: "og:image", content: agencyImage },
-    { name: "twitter:image", content: agencyImage },
+    { name: "description", content: Details.metaDescription },
+    { name: "og:description", content: Details.metaDescription },
+    { name: "twitter:description", content: Details.metaDescription },
   ];
 
   const getLdJson = () => {
@@ -37,8 +33,11 @@ const AgencyDetailSEO = (props: Iprops) => {
   };
   return (
     <>
+      <SEO
+        title={props.title}
+        details={commonMetaData.concat(agencyMetaDetails)}
+      />
       <LdJson ldJson={getLdJson()} />
-      <SEO title={props.title} details={agencyMetaDetails} />
     </>
   );
 };

@@ -1,5 +1,7 @@
 import NewDevelopmentsMain from "@/modules/new-developments/components/newDevelopmentsMain";
+import NewDevelopmentSEO from "@/modules/new-developments/newDevelopSEO";
 import Layout from "@/shared/components/Layout/Layout";
+import Container from "@/shared/components/pageContainer/pageContainer";
 import type { GetServerSideProps, GetServerSidePropsContext } from "next";
 
 type MyProps = {
@@ -17,7 +19,14 @@ export const getServerSideProps: GetServerSideProps<MyProps> = async (
 const NewDevelopments = ({ repo }: MyProps) => {
   return (
     <Layout>
-      <NewDevelopmentsMain addressDetail={repo} />
+      <NewDevelopmentSEO
+        metaData={repo.metaData}
+        title="resi.uatz.view.com.au"
+        details={repo.data}
+      />
+      <Container>
+        <NewDevelopmentsMain addressDetail={repo} />
+      </Container>
     </Layout>
   );
 };

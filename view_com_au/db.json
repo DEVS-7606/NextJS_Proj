@@ -5,6 +5,8 @@
         "id": "63eaec5f-581c-442f-9de9-657939a7baf7",
         "title": "Grand Reve",
         "status": "published",
+        "url": "https://resi.uatz.view.com.au/new-developments/nsw-castle-hill-2154/development-details/grand-reve/",
+        "metaDescription": "Grand Reve is located on 6 - 18 Garthowen Crescent, Castle Hill, NSW 2154. Pricing and Photos available for this New Development by Grand Reve. Visit the site for more details! ",
         "projectStatus": null,
         "featuredWeight": 25,
         "discr": "development",
@@ -1078,6 +1080,85 @@
         "statusCode": 200
       }
     },
+    "metaData": [
+      { "name": "apple-mobile-web-app-capable", "content": "yes" },
+      { "name": "author", "content": "resi.uatz.view.com.au" },
+      { "name": "og:site_name", "content": "resi.uatz.view.com.au" },
+      {
+        "name": "image",
+        "content": "https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png"
+      },
+      {
+        "name": "og:image",
+        "content": "https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png"
+      },
+      {
+        "name": "twitter:image",
+        "content": "https://resi.uatz.view.com.au/viewstatic/lancer/static/images/logo.png"
+      },
+      {
+        "name": "og:type",
+        "content": "website"
+      },
+      {
+        "name": "theme-color",
+        "content": "#FFFFFF"
+      },
+      {
+        "name": "smartbanner:title",
+        "content": "resi.stgz.view.com.au - Real Estate"
+      },
+      { "name": "smartbanner:author", "content": "resi.stgz.view.com.au" },
+      { "name": "smartbanner:price", "content": "free" },
+      {
+        "name": "smartbanner:price-suffix-apple",
+        "content": " - On the App Store"
+      },
+      {
+        "name": "smartbanner:price-suffix-google",
+        "content": " - In Google Play"
+      },
+      {
+        "name": "smartbanner:icon-apple",
+        "content": "/images/apple-icon.png"
+      },
+      {
+        "name": "smartbanner:icon-google",
+        "content": "/images/android-icon.png"
+      },
+      {
+        "name": "smartbanner:button",
+        "content": "INSTALL"
+      },
+      {
+        "name": "smartbanner:button-url-apple",
+        "content": "https://play.google.com/store/apps/details?id=au.com.realestateview&hl=en"
+      },
+      {
+        "name": "smartbanner:button-url-google",
+        "content": "https://play.google.com/store/apps/details?id=au.com.realestateview&hl=en"
+      },
+      {
+        "name": "smartbanner:enabled-platforms",
+        "content": "android"
+      },
+      {
+        "name": "smartbanner:hide-path",
+        "content": "/"
+      },
+      {
+        "name": "twitter:site",
+        "content": "@ViewComAu"
+      },
+      {
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      },
+      {
+        "name": "twitter:creator",
+        "content": "@ViewComAu"
+      }
+    ],
     "errorMsg": "",
     "statusCode": 200,
     "detectedIp": "183.83.240.21"

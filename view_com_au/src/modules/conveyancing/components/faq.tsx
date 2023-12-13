@@ -10,9 +10,9 @@ const FAQ = (props: IProps): JSX.Element => {
   return (
     <div className={"border-b"} key={props.index}>
       <ToggleButton
-        mainClassName="text-2xl font-medium pb-1 flex flex-col-reverse"
+        mainClassName="pb-1 flex flex-col-reverse"
         initialHeight="0px"
-        className="justify-between py-sm flex-row-reverse"
+        className="text-2xl font-medium justify-between py-sm flex-row-reverse"
         ShowLess="-"
         ShowMore="+"
         valueClassName="text-sm font-normal flex flex-col gap-3 after:mb-4"

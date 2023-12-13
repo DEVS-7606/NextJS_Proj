@@ -32,7 +32,7 @@ const AboutAgency = (props: any) => {
             <DownArrow rotateAngle="rotate-180" />
           </div>
         }
-        valueClassName="pl-8 relative ease-in-out before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent pb-20"
+        valueClassName="pl-8 relative ease-in-out before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent"
         value={renderAgencyDetail()}
       />
     </div>

@@ -79,7 +79,12 @@ const ToggleButton = (props: Iprops) => {
   const renderValue = () => {
     return (
       <div
-        className={`overflow-hidden transition-all duration-500 ${props.valueClassName}`}
+        className={`overflow-hidden transition-all duration-500 ${
+          show &&
+          (props.initialHeight === "120px" || props.initialHeight === "200px")
+            ? `pl-8 before:bg-gradient-to-t before:from-transparent before:via-transparent before:to-transparent`
+            : props.valueClassName
+        }`}
         ref={customRef}
         style={{ height: heightRef.current }}
       >

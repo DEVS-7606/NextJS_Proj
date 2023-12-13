@@ -32,6 +32,7 @@ const RealEstateAgency = (props: MyProps) => {
   return (
     <Layout>
       <AgencyDetailSEO
+        metaData={props.repo.metaData}
         title="resi.uatz.view.com.au"
         details={props.repo.pageProps}
       />
