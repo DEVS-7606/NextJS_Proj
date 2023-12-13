@@ -35,7 +35,7 @@ const AgencyDetailSEO = (props: Iprops) => {
     <>
       <SEO
         title={props.title}
-        details={commonMetaData.concat(agencyMetaDetails)}
+        details={commonMetaData?.concat(agencyMetaDetails)}
       />
       <LdJson ldJson={getLdJson()} />
     </>

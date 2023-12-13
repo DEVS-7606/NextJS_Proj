@@ -22,7 +22,6 @@ const BuyAndSellBanner = () => {
       className="w-full pt-24 flex justify-between p-6 md:px-16 md:py-12 "
       title="Buying or selling?"
       subTitle="Redeem your $220 conveyancing voucher and free contract review"
-      isRounded={"xl"}
     >
       {renderSettleEasy()}
     </HeroContainer>

@@ -117,7 +117,6 @@ const AddressBanner = ({
           title={title}
           subTitle={`${fareNum} ${fare}, ${area}, ${state} ${postalCode}`}
           className="w-full lg:w-3/5 flex flex-col h-full gap-8  p-6 md:px-16 md:py-12 "
-          isRounded={"xl"}
         >
           <div className="flex flex-col lg:flex-row gap-4 lg:justify-between">
             {renderEnquireBtn()}

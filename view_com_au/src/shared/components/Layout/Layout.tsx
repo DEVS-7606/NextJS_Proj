@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Header from "../header/header";
 import Footer from "../footer/footer";
 import SideNavbar from "../sideNavbar/sideNavbar";
 
-const Layout = (props: { children: any }) => {
+interface IProps {
+  children: ReactNode;
+}
+
+const Layout = ({ children }: IProps) => {
   const [showSideNavbar, setShowSideNavbar] = useState(false);
 
   const toggleNavbar = () => {
@@ -12,7 +16,7 @@ const Layout = (props: { children: any }) => {
   return (
     <>
       <Header toggleNavbar={toggleNavbar} toggleValue={showSideNavbar} />
-      {props.children}
+      {children}
       <Footer />
       <SideNavbar showSideNavbar={showSideNavbar} />
     </>

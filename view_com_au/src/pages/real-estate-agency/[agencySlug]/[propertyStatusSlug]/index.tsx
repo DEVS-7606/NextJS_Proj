@@ -23,15 +23,34 @@ export const getServerSideProps: GetServerSideProps<any> = async (
   const res = await fetch("http://localhost:8000/props");
   const repo = await res.json();
   if (params) {
-    return { props: { repo, params } };
+    if (
+      !(
+        params.propertyStatusSlug === "sale" ||
+        params.propertyStatusSlug === "rent"
+      )
+    ) {
+      return {
+        props: { repo },
+        redirect: { permanent: true, destination: "/" },
+      };
+    }
+    return {
+      props: { repo, params },
+    };
   }
-  return { props: { repo } };
+  return {
+    props: { repo },
+    redirect: { permanent: true, destination: "/" },
+  };
 };
 
 const RealEstateAgency = (props: MyProps) => {
+  console.log(props.params);
+
   return (
     <Layout>
       <AgencyDetailSEO
+        metaData={props.repo.metaData}
         title="resi.uatz.view.com.au"
         details={props.repo.pageProps}
       />

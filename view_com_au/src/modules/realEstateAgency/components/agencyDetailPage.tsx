@@ -105,7 +105,7 @@ const AgencyDetailPage = (props: Iprops) => {
           className="p-6 md:px-16 md:py-12"
           title={props.details.data.name}
           subTitle={props.details.data.address}
-          isRounded={"none"}
+          isRounded={false}
         >
           <div className="flex flex-col gap-2">
             {renderWebsiteLink()}

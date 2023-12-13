@@ -28,7 +28,6 @@ const ExploreProperties: () => JSX.Element = () => {
       className="mb-16 md:pr-72 w-full p-6 md:px-16 md:py-12 "
       title="Explore properties wherever and whenever you like."
       subTitle="Available on iOS and Android, the resi.uatz.view.com.au app helps you keep on top of your property search with the latest real estate listings for sale, rent, recently sold, as well as unlisted properties."
-      isRounded={"xl"}
     >
       {renderAppsImage()}
     </HeroContainer>

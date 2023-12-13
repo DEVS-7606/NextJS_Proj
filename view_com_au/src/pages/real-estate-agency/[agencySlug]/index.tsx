@@ -23,9 +23,15 @@ export const getServerSideProps: GetServerSideProps<any> = async (
   const res = await fetch("http://localhost:8000/props");
   const repo = await res.json();
   if (params) {
-    return { props: { repo, params } };
+    return {
+      props: { repo, params },
+      // redirect: { permanent: false, destination: "...:slug" },
+    };
   }
-  return { props: { repo } };
+  return {
+    props: { repo },
+    // redirect: { permanent: false, destination: ":slug" },
+  };
 };
 
 const RealEstateAgency = (props: MyProps) => {
