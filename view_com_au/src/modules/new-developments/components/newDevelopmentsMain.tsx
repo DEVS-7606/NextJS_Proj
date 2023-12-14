@@ -1,10 +1,9 @@
-import FeaturesAndAmenities from "../featuresAndAmenities";
+import FeaturesAndAmenities from "./featuresAndAmenities";
 import AboutProperty from "./aboutProperty";
 import AddressBanner from "./addressBanner";
-import Container from "@/shared/components/pageContainer/pageContainer";
 import OffThePlanForSale from "./offThePlanForSale";
 import InsightOnArea from "./insightOnArea";
-import SuburbProfile from "@/modules/conveyancing/components/suburbProfile";
+import SuburbProfile from "./suburbProfile";
 
 const NewDevelopmentsMain = (props: any) => {
   const addressDetail = props.addressDetail.data.developmentDetail;
@@ -13,7 +12,7 @@ const NewDevelopmentsMain = (props: any) => {
   const description = addressDetail.description.textProfile;
 
   return (
-    <Container>
+    <>
       <AddressBanner
         title={addressDetail.title}
         fareNum={address.thoroughfareNumber}
@@ -56,7 +55,7 @@ const NewDevelopmentsMain = (props: any) => {
         <InsightOnArea suburb={props.addressDetail.data.suburb} />
         <SuburbProfile suburb={props.addressDetail.data.suburb} />
       </div>
-    </Container>
+    </>
   );
 };
 

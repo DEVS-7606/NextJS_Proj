@@ -57,6 +57,7 @@ const AddressBanner = ({
       <Button
         title="Enquire Now"
         className="w-40 px-0 py-2 gap-2"
+        textColor="white"
         Icons={
           <i
             className="fa-regular fa-envelope-open"
@@ -115,8 +116,7 @@ const AddressBanner = ({
         <HeroContainer
           title={title}
           subTitle={`${fareNum} ${fare}, ${area}, ${state} ${postalCode}`}
-          className="w-full lg:w-3/5 flex flex-col h-full gap-8"
-          subTitleClassName=""
+          className="w-full lg:w-3/5 flex flex-col h-full gap-8  p-6 md:px-16 md:py-12 "
         >
           <div className="flex flex-col lg:flex-row gap-4 lg:justify-between">
             {renderEnquireBtn()}

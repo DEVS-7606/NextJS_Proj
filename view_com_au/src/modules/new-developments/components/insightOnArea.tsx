@@ -9,7 +9,7 @@ interface Iprops {
 const InsightOnArea = (props: Iprops) => {
   const renderInsights = () => {
     return (
-      <div>
+      <>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora
         temporibus dolorum pariatur accusantium nobis autem, magnam harum
         delectus ullam dolores neque suscipit, sequi dicta quasi saepe sapiente
@@ -27,7 +27,7 @@ const InsightOnArea = (props: Iprops) => {
         tempora nulla reiciendis ipsum doloribus, amet sit atque molestiae
         minima quia ducimus aspernatur enim consequatur voluptate aliquid sequi
         voluptas. Commodi, at rerum aspernatur sapiente ut ipsum velit.
-      </div>
+      </>
     );
   };
 
@@ -38,7 +38,6 @@ const InsightOnArea = (props: Iprops) => {
           mainClassName="flex flex-col-reverse"
           initialHeight="0px"
           className="justify-between flex-row-reverse"
-          toggleClassName="flex flex-row items-center"
           ShowLess={
             <Image
               src={arrow}
@@ -74,7 +73,6 @@ const InsightOnArea = (props: Iprops) => {
           mainClassName="flex flex-col-reverse"
           initialHeight="0px"
           className="justify-between flex-row-reverse"
-          toggleClassName="flex flex-row items-center"
           ShowLess={
             <Image
               src={arrow}

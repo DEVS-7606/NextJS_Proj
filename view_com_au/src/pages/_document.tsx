@@ -14,7 +14,7 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -24,7 +24,7 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -34,7 +34,7 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@700&display=swap"
           rel="stylesheet"
-        ></link>
+        />
 
         {/* Font Awesome */}
         <script

@@ -110,12 +110,16 @@ const Header = (props: IProps): JSX.Element => {
 
   const renderJoinAndSignIn = () => {
     return (
-      <Button title="Join / Sign In" className="px-4 py-2 md:px-3 md:py-2.5" />
+      <Button
+        textColor="white"
+        title="Join / Sign In"
+        className="px-4 py-2 md:px-3 md:py-2.5"
+      />
     );
   };
 
   return (
-    <div className="bg-white sticky top-0 w-screen z-20 py-2 border-b">
+    <div className="bg-white sticky top-0 w-screen z-50 py-2 border-b mb-4">
       <Container>
         <div className="relative flex flex-row justify-between items-center xl:py-1 text-base">
           <div className="flex xl:flex-none gap-4 xl:items-start">

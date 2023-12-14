@@ -1,10 +1,15 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
+
+export const getServerSideProps = async (context: any) => {
+  return {
+    redirect: {
+      permanent: true,
+      destination: "/real-estate-agency/biggin-scott-richmond-4326",
+    },
+  };
+};
 
 const Home = (): JSX.Element => {
-  useEffect(() => {
-    window.location.assign("/new-developments");
-  }, []);
-
   return <p>Loading...</p>;
 };
 

@@ -6,6 +6,7 @@ import home from "../../../../public/images/new-dev-home.svg";
 import downArrow from "../../../../public/images/downArrow.svg";
 import Image from "next/image";
 import ToggleButton from "@/shared/components/toggleMoreOrLessBtn/toggleMoreOrLessBtn";
+import DownArrow from "@/shared/components/downArrow/downArrow";
 
 const AboutProperty = ({
   title,
@@ -120,7 +121,7 @@ const AboutProperty = ({
     return (
       <div
         dangerouslySetInnerHTML={{ __html: updateDescriptionList }}
-        className="mt-14 mb-6 flex flex-col gap-8 text-almostBlack"
+        className="mt-14 flex flex-col gap-8 text-almostBlack"
       />
     );
   };
@@ -130,19 +131,23 @@ const AboutProperty = ({
       {renderBasicSpecsOfProperty()}
       <hr />
       <ToggleButton
-        mainClassName="relative"
         initialHeight="200px"
         className="text-seaBlue gap-1"
-        ShowMore="Read more"
-        ShowLess="Read less"
-        valueClassName="pl-8 des relative overflow-hidden transition-all ease-in-out duration-500 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent after:h-10"
+        ShowMore={
+          <div className="flex gap-2 items-stretch">
+            Read More
+            <DownArrow rotateAngle="rotate-0" />
+          </div>
+        }
+        ShowLess={
+          <div className="flex gap-2 items-stretch">
+            Read Less
+            <DownArrow rotateAngle="rotate-180" />
+          </div>
+        }
+        valueClassName="pl-8 relative ease-in-out before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-28 before:bg-gradient-to-t before:from-[rgba(255,255,255)] before:via-[rgba(255,255,255,0.7)] before:to-transparent"
         value={renderMoreDetailsOfProperty()}
-        propsChildClass=""
-        propsChildClassIfFalse="rotate-180"
-        propsChildClassIfTrue="rotate-0"
-      >
-        <Image src={downArrow} alt="downArrow" />
-      </ToggleButton>
+      />
     </div>
   );
 };
